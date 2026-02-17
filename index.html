@@ -1,1 +1,32 @@
-<h1>Mappa GPX</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPX Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+    <style>
+        #map { height: 100vh; width: 100%; margin: 0; }
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([0, 0], 2);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        // Список ваших файлов (замените на свои названия)
+        var tracks = ['tracks/1.gpx', 'tracks/2.gpx'];
+
+        tracks.forEach(function(url) {
+            new L.GPX(url, {
+                async: true,
+                marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }
+            }).on('loaded', function(e) {
+                map.fitBounds(e.target.getBounds());
+            }).addTo(map);
+        });
+    </script>
+</body>
+</html>
