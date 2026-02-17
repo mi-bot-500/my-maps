@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Mappa GPX con Rilievo</title>
+    <title>Mappa GPX</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map { height: 100vh; width: 100%; margin: 0; }
@@ -18,20 +18,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
 
     <script>
-        // Инициализация карты
         var map = L.map('map').setView([0, 0], 2);
 
-        // Слой с рельефом (OpenTopoMap)
         L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
             maxZoom: 17,
-            attribution: 'Map data: © OSM, SRTM | Style: © OpenTopoMap'
+            attribution: 'Map data: © OSM | Style: © OpenTopoMap'
         }).addTo(map);
 
-        // Список твоих файлов (добавляй сюда новые файлы по мере появления)
-        var tracks = [
-            'tracks/1.gpx', 
-            'tracks/2.gpx'
-        ];
+        var tracks = ['tracks/1.gpx', 'tracks/2.gpx'];
 
         tracks.forEach(function(url) {
             new L.GPX(url, {
@@ -40,22 +34,31 @@
                 polyline_options: { color: '#0000FF', weight: 4, opacity: 0.6 }
             }).on('loaded', function(e) {
                 var gpx = e.target;
-                
-                // Сбор данных из GPX
-                var name = gpx.get_name() || "Senza nome";
+                var name = gpx.get_name() || "Track";
                 var dist = (gpx.get_distance() / 1000).toFixed(2);
-                var date = gpx.get_start_time() ? gpx.get_start_time().toLocaleDateString() : "Data non disponibile";
+                var date = gpx.get_start_time() ? gpx.get_start_time().toLocaleDateString() : "---";
 
-                var info = `<b>${name}</b><br>📅 ${date}<br>📏 ${dist} km`;
+                var info = `<b>${name}</b><br>📅 ${date}<br>📏 ${dist} km<br>🖱️ <i>Click destro per scaricare</i>`;
 
-                // Эффекты при наведении
                 gpx.getLayers().forEach(function(layer) {
+                    // Наведение
                     layer.on('mouseover', function(evt) {
                         layer.setStyle({ color: '#FF0000', weight: 6, opacity: 1 });
                         layer.bindTooltip(info, { sticky: true }).openTooltip();
                     });
                     layer.on('mouseout', function() {
                         layer.setStyle({ color: '#0000FF', weight: 4, opacity: 0.6 });
+                    });
+
+                    // Скачивание по правой кнопке
+                    layer.on('contextmenu', function(evt) {
+                        L.DomEvent.stopPropagation(evt);
+                        if (confirm("Scaricare " + url.split('/').pop() + "?")) {
+                            var link = document.createElement('a');
+                            link.href = url;
+                            link.download = url.split('/').pop();
+                            link.click();
+                        }
                     });
                 });
 
