@@ -1,38 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>GPX Map</title>
+    <meta charset="UTF-8">
+    <title>Mappa GPX con Rilievo</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
     <style>
         #map { height: 100vh; width: 100%; margin: 0; }
-        body { margin: 0; }
+        body { margin: 0; padding: 0; }
+        .leaflet-tooltip { font-size: 14px; padding: 10px; }
     </style>
 </head>
 <body>
+
     <div id="map"></div>
-<script>
-    var map = L.map('map').setView([0, 0], 2);
-    
-    // Слой с рельефом
-    L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-        maxZoom: 17,
-        attribution: 'Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap'
-    }).addTo(map);
 
-    // Список ваших файлов (убедитесь, что они есть в папке tracks)
-    var tracks = ['tracks/1.gpx', 'tracks/2.gpx'];
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
 
-    tracks.forEach(function(url) {
-        new L.GPX(url, {
-            async: true,
-            marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }
-        }).on('loaded', function(e) {
-            map.fitBounds(e.target.getBounds());
+    <script>
+        // Инициализация карты
+        var map = L.map('map').setView([0, 0], 2);
+
+        // Слой с рельефом (OpenTopoMap)
+        L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+            maxZoom: 17,
+            attribution: 'Map data: © OSM, SRTM | Style: © OpenTopoMap'
         }).addTo(map);
-    });
-</script>
 
+        // Список твоих файлов (добавляй сюда новые файлы по мере появления)
+        var tracks = [
+            'tracks/1.gpx', 
+            'tracks/2.gpx'
+        ];
+
+        tracks.forEach(function(url) {
+            new L.GPX(url, {
+                async: true,
+                marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+                polyline_options: { color: '#0000FF', weight: 4, opacity: 0.6 }
+            }).on('loaded', function(e) {
+                var gpx = e.target;
+                
+                // Сбор данных из GPX
+                var name = gpx.get_name() || "Senza nome";
+                var dist = (gpx.get_distance() / 1000).toFixed(2);
+                var date = gpx.get_start_time() ? gpx.get_start_time().toLocaleDateString() : "Data non disponibile";
+
+                var info = `<b>${name}</b><br>📅 ${date}<br>📏 ${dist} km`;
+
+                // Эффекты при наведении
+                gpx.getLayers().forEach(function(layer) {
+                    layer.on('mouseover', function(evt) {
+                        layer.setStyle({ color: '#FF0000', weight: 6, opacity: 1 });
+                        layer.bindTooltip(info, { sticky: true }).openTooltip();
+                    });
+                    layer.on('mouseout', function() {
+                        layer.setStyle({ color: '#0000FF', weight: 4, opacity: 0.6 });
+                    });
+                });
+
+                map.fitBounds(gpx.getBounds());
+            }).addTo(map);
+        });
+    </script>
 </body>
 </html>
