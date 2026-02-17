@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Mappa con Livelli</title>
+    <title>Mappa GPX Personale</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map { height: 100vh; width: 100%; margin: 0; }
         body { margin: 0; padding: 0; }
+        .leaflet-tooltip { font-size: 14px; padding: 10px; border-radius: 8px; }
     </style>
 </head>
 <body>
+
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
 
     <script>
-        // 1. Определение слоев
+        // 1. Configurazione livelli
         var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap'
         });
@@ -25,53 +27,76 @@
             attribution: '© OpenTopoMap'
         });
 
-        var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-            attribution: '© Esri Satellite'
-        });
-
-        var terrain = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+        var esriTerrain = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
             attribution: '© Esri Terrain'
         });
 
-        var cyclOSM = L.tileLayer('https://{s}.tile.cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
-            attribution: '© CyclOSM'
+        var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains:['mt0','mt1','mt2','mt3'],
+            attribution: '© Google Maps'
         });
 
-        // 2. Инициализация карты с дефолтным слоем
+        var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains:['mt0','mt1','mt2','mt3'],
+            attribution: '© Google Maps'
+        });
+
+        // 2. Inizializzazione mappa
         var map = L.map('map', {
             center: [0, 0],
             zoom: 2,
-            layers: [terrain] // Слой по умолчанию (как на твоем скриншоте)
+            layers: [googleTerrain]
         });
 
-        // 3. Создание меню переключения
+        // 3. Menu livelli
         var baseMaps = {
-            "Рельеф (как на фото)": terrain,
-            "Детальная (Hike)": cyclOSM,
-            "Топографическая": topo,
-            "Спутник": satellite,
-            "Стандарт OSM": osm
+            "Google Rilievo": googleTerrain,
+            "Google Satellite": googleSat,
+            "Esri Rilievo": esriTerrain,
+            "Mappa Topografica": topo,
+            "Standard OSM": osm
         };
 
         L.control.layers(baseMaps).addTo(map);
 
-        // 4. Загрузка треков (логика та же)
+        // 4. Caricamento tracce
         var tracks = ['tracks/1.gpx', 'tracks/2.gpx'];
+
         tracks.forEach(function(url) {
             new L.GPX(url, {
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-                polyline_options: { color: 'blue', weight: 4 }
+                polyline_options: { color: '#0000FF', weight: 4, opacity: 0.6 }
             }).on('loaded', function(e) {
                 var gpx = e.target;
-                var info = `<b>${gpx.get_name()}</b><br>📏 ${(gpx.get_distance()/1000).toFixed(2)} km`;
-                
+                var name = gpx.get_name() || "Percorso";
+                var dist = (gpx.get_distance() / 1000).toFixed(2);
+                var date = gpx.get_start_time() ? gpx.get_start_time().toLocaleDateString('it-IT') : "---";
+
+                var info = `<b>${name}</b><br>📅 Data: ${date}<br>📏 Dist: ${dist} km<br>🖱️ <i>Tasto destro per scaricare</i>`;
+
                 gpx.getLayers().forEach(function(layer) {
-                    layer.bindTooltip(info, { sticky: true });
-                    layer.on('contextmenu', function() {
-                        if(confirm("Download?")) { window.location.href = url; }
+                    layer.on('mouseover', function(evt) {
+                        layer.setStyle({ color: '#FF0000', weight: 6, opacity: 1 });
+                        layer.bindTooltip(info, { sticky: true }).openTooltip();
+                    });
+                    layer.on('mouseout', function() {
+                        layer.setStyle({ color: '#0000FF', weight: 4, opacity: 0.6 });
+                    });
+
+                    layer.on('contextmenu', function(evt) {
+                        L.DomEvent.stopPropagation(evt);
+                        if (confirm("Scaricare il file " + url.split('/').pop() + "?")) {
+                            var link = document.createElement('a');
+                            link.href = url;
+                            link.download = url.split('/').pop();
+                            link.click();
+                        }
                     });
                 });
+
                 map.fitBounds(gpx.getBounds());
             }).addTo(map);
         });
