@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Maps - Multi Layer</title>
+    <title>My Maps - Track Control</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; }
@@ -24,8 +24,8 @@
         }
         #sidebar.hidden + #toggle-btn { left: 20px; }
 
-        /* Смещение зума ниже кнопки меню */
-        .leaflet-top.leaflet-left { margin-top: 70px; }
+        /* Перенос кнопок зума в правый нижний угол, чтобы не мешали меню */
+        .leaflet-bottom.leaflet-right { margin-bottom: 20px; }
 
         #track-list { overflow-y: auto; flex-grow: 1; }
         .track-item { 
@@ -34,14 +34,25 @@
         }
         .track-clickable { 
             cursor: pointer; flex-grow: 1; display: flex; 
-            justify-content: space-between; align-items: center; overflow: hidden; 
+            flex-direction: column; overflow: hidden; 
         }
         .track-name { 
             font-weight: 600; font-size: 13px; white-space: nowrap; 
             overflow: hidden; text-overflow: ellipsis; 
         }
-        .track-dist { font-size: 11px; color: #666; background: #eee; padding: 2px 6px; border-radius: 10px; flex-shrink: 0; }
-        .btn-download { background: #28a745; color: white; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; flex-shrink: 0; }
+        .track-info-row { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; }
+        .track-dist { font-size: 11px; color: #666; background: #eee; padding: 2px 6px; border-radius: 10px; }
+        
+        /* Кнопки управления */
+        .controls { display: flex; gap: 5px; }
+        .btn-action { 
+            width: 28px; height: 28px; border-radius: 50%; border: none;
+            display: flex; align-items: center; justify-content: center; 
+            cursor: pointer; font-size: 14px; text-decoration: none; color: white;
+        }
+        .btn-hide { background: #6c757d; }
+        .btn-hide.hidden-track { background: #dc3545; opacity: 0.6; }
+        .btn-download { background: #28a745; }
     </style>
 </head>
 <body>
@@ -60,53 +71,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
 
     <script>
-        // --- Определение всех возможных слоев ---
-        
-        // Google Maps
-        const googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
-            maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google'
-        });
-        const googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-            maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google'
-        });
-        const googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
-            maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google'
-        });
-        const googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-            maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google'
-        });
-
-        // OpenStreetMap & Topo
-        const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap'
-        });
-        const openTopo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenTopoMap'
-        });
-        const cycloOSM = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
-            attribution: '© Cyclosm'
-        });
-
-        // Инициализация карты
-        const map = L.map('map', { 
-            center: [45.0, 9.0], 
-            zoom: 5,
-            layers: [googleTerrain] // Основной слой
-        });
-
-        // Группировка слоев для меню
-        const baseMaps = {
-            "Google Rilievo": googleTerrain,
-            "Google Satellite": googleSat,
-            "Google Ibrido": googleHybrid,
-            "Google Strade": googleStreets,
-            "OpenStreetMap": osm,
-            "Mappa Topografica": openTopo,
-            "Ciclabile (Cyclosm)": cycloOSM
+        // Инициализация слоев
+        const layers = {
+            "Google Rilievo": L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'] }),
+            "Google Satellite": L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'] }),
+            "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
+            "Topografica": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png')
         };
 
-        // Добавление контроллера слоев
-        L.control.layers(baseMaps, null, { collapsed: true }).addTo(map);
+        const map = L.map('map', { 
+            center: [45, 9], 
+            zoom: 5, 
+            layers: [layers["Google Rilievo"]],
+            zoomControl: false // Отключаем стандартный, добавим в другое место
+        });
+
+        // Добавляем зум в правый нижний угол
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
+        L.control.layers(layers, null, { collapsed: true }).addTo(map);
 
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
@@ -114,62 +96,68 @@
             setTimeout(() => { map.invalidateSize(); }, 350);
         }
 
-        function getRandomColor() {
-            const colors = ['#FF5733', '#28a745', '#007bff', '#F333FF', '#FF33A8', '#E67E22', '#1ABC9C'];
-            return colors[Math.floor(Math.random() * colors.length)];
-        }
-
-        const user = 'mi-bot-500';
-        const repo = 'my-maps';
-        const folder = 'tracks';
+        const user = 'mi-bot-500', repo = 'my-maps', folder = 'tracks';
         const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${folder}`;
+        window.tracksData = {};
 
         async function loadAllTracks() {
             try {
                 const response = await fetch(apiUrl);
                 const files = await response.json();
                 const gpxFiles = files.filter(f => f.name.toLowerCase().endsWith('.gpx'));
-                
                 document.getElementById('track-list').innerHTML = '';
                 gpxFiles.forEach(file => renderTrack(file.download_url, file.name));
-            } catch (e) {
-                console.error("Errore:", e);
-            }
+            } catch (e) { console.error(e); }
         }
 
-        window.tracksData = {};
-
         function renderTrack(url, fileName) {
-            const trackColor = getRandomColor();
-            
+            const color = ['#FF5733', '#28a745', '#007bff', '#F333FF', '#E67E22'][Math.floor(Math.random()*5)];
             const gpx = new L.GPX(url, {
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-                polyline_options: { color: trackColor, weight: 4, opacity: 0.8 }
+                polyline_options: { color: color, weight: 4, opacity: 0.8 }
             }).on('loaded', function(e) {
-                const gpxLayer = e.target;
-                const dist = (gpxLayer.get_distance() / 1000).toFixed(1);
-                const displayName = fileName.replace('.gpx', '');
-                const id = L.stamp(gpxLayer);
+                const layer = e.target;
+                const id = L.stamp(layer);
+                const dist = (layer.get_distance() / 1000).toFixed(1);
+                const name = fileName.replace('.gpx', '');
 
                 const item = document.createElement('div');
                 item.className = 'track-item';
+                item.id = `item-${id}`;
                 item.innerHTML = `
                     <div class="track-clickable" onclick="focusTrack('${id}')">
-                        <span class="track-name" style="color:${trackColor}">${displayName}</span>
-                        <span class="track-dist">${dist} km</span>
+                        <span class="track-name" style="color:${color}">${name}</span>
+                        <div class="track-info-row"><span class="track-dist">${dist} km</span></div>
                     </div>
-                    <a href="${url}" class="btn-download" download>↓</a>
+                    <div class="controls">
+                        <button class="btn-action btn-hide" onclick="toggleVisibility('${id}')" title="Nascondi/Mostra">👁</button>
+                        <a href="${url}" class="btn-action btn-download" download title="Download">↓</a>
+                    </div>
                 `;
                 document.getElementById('track-list').appendChild(item);
-                window.tracksData[id] = gpxLayer;
+                window.tracksData[id] = layer;
             }).addTo(map);
         }
 
         function focusTrack(id) {
             const track = window.tracksData[id];
-            if (track) {
+            if (track && map.hasLayer(track)) {
                 map.fitBounds(track.getBounds(), { padding: [50, 50] });
+            }
+        }
+
+        function toggleVisibility(id) {
+            const track = window.tracksData[id];
+            const btn = document.querySelector(`#item-${id} .btn-hide`);
+            if (map.hasLayer(track)) {
+                map.removeLayer(track);
+                btn.classList.add('hidden-track');
+                btn.innerText = '✕';
+            } else {
+                map.addLayer(track);
+                btn.classList.remove('hidden-track');
+                btn.innerText = '👁';
             }
         }
 
