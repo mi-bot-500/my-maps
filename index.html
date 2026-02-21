@@ -2,15 +2,20 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Maps Pro - Ultimate Edition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>My Maps Pro - PWA Edition</title>
     
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MyTracks">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/854/854878.png">
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
     
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; overflow: hidden; }
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; overflow: hidden; background: #000; }
         #map { height: 100vh; width: 100%; z-index: 1; background: #f0f0f0; }
         
         #sidebar { 
@@ -28,7 +33,7 @@
         }
         #sidebar.hidden + #toggle-btn { left: 20px; }
 
-        .header { padding: 15px; background: #007bff; color: white; }
+        .header { padding: 15px; background: #007bff; color: white; padding-top: 40px; } /* Отступ для iPhone Notch */
         .stats { font-size: 11px; opacity: 0.9; margin-top: 5px; display: flex; gap: 10px; }
         .search-area { padding: 10px; border-bottom: 1px solid #eee; background: #fafafa; }
         #search-input { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
@@ -47,6 +52,9 @@
         .btn-hide.hidden-track { background: #dc3545; }
         .btn-download { background: #28a745; }
 
+        /* Стили для кнопки Share */
+        .leaflet-control-share { background: white; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 4px; box-shadow: 0 1px 5px rgba(0,0,0,0.4); font-size: 18px; }
+
         .leaflet-bottom.leaflet-right { margin-bottom: 25px; margin-right: 10px; z-index: 800; }
         .elevation-control.leaflet-control { background: rgba(255, 255, 255, 0.9) !important; border-radius: 8px; }
     </style>
@@ -55,7 +63,7 @@
 
     <div id="sidebar">
         <div class="header">
-            <h3 style="margin:0; font-size: 16px;">📍 Tracce & Altimetria</h3>
+            <h3 style="margin:0; font-size: 16px;">📍 MyTracks PWA</h3>
             <div class="stats">
                 <span id="stat-count">Tracce: 0</span>
                 <span id="stat-dist">Totale: 0 km</span>
@@ -81,19 +89,17 @@
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
 
     <script>
-        // --- 1. ВСЕ СЛОИ (Базовые и Оверлеи) ---
+        // --- 1. LAYERS ---
         const baseLayers = {
             "Google Rilievo": L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
             "Google Satellite": L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
             "Google Ibrido": L.tileLayer('http://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
-            "Esri Imagery": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: '© Esri' }),
             "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OSM' }),
-            "Topografica (OTM)": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', { attribution: '© OTM' }),
             "Ciclabile (CyclOSM)": L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: '© CyclOSM' })
         };
 
         const overlays = {
-            "Percorsi Hiking (Waymarked)": L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', { opacity: 0.7, attribution: '© Waymarked Trails' })
+            "Percorsi Hiking": L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', { opacity: 0.7, attribution: '© Waymarked Trails' })
         };
 
         const map = L.map('map', { 
@@ -101,7 +107,7 @@
             layers: [baseLayers["Google Rilievo"]], zoomControl: false 
         });
 
-        // --- 2. КОНТРОЛЛЕРЫ ---
+        // --- 2. CONTROLS ---
         const elevationControl = L.control.elevation({
             position: "bottomright", theme: "skyblue-theme", width: 400, height: 150,
             useHeightIndicator: true, collapsed: false, detached: false, summary: 'inline',
@@ -109,18 +115,36 @@
 
         L.control.zoom({ position: 'bottomright' }).addTo(map);
         L.control.layers(baseLayers, overlays, { collapsed: true }).addTo(map);
-        L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
 
-        // --- ДОБАВЛЕНО: Кнопка геолокации ---
-        L.control.locate({
+        const lc = L.control.locate({
             position: 'bottomright',
             flyTo: true,
             keepCurrentZoomLevel: true,
-            strings: {
-                title: "Mostra la mia posizione"
-            }
+            strings: { title: "Posizione" }
         }).addTo(map);
 
+        // --- 3. SHARE LOCATION FUNCTION ---
+        const ShareControl = L.Control.extend({
+            options: { position: 'bottomright' },
+            onAdd: function() {
+                const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-share');
+                container.innerHTML = '📤';
+                container.onclick = function() {
+                    const center = map.getCenter();
+                    const url = `https://www.google.com/maps?q=${center.lat},${center.lng}`;
+                    if (navigator.share) {
+                        navigator.share({ title: 'La mia posizione', url: url });
+                    } else {
+                        alert("Link copiato: " + url);
+                        navigator.clipboard.writeText(url);
+                    }
+                };
+                return container;
+            }
+        });
+        map.addControl(new ShareControl());
+
+        // --- 4. DATA LOADING (GITHUB) ---
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             sidebar.classList.toggle('hidden');
@@ -139,7 +163,7 @@
                 const gpxFiles = files.filter(f => f.name.toLowerCase().endsWith('.gpx'));
                 document.getElementById('track-list').innerHTML = '';
                 gpxFiles.forEach(file => renderTrack(file.download_url, file.name));
-            } catch (e) { console.error("Errore GitHub API:", e); }
+            } catch (e) { console.error("Error:", e); }
         }
 
         function renderTrack(url, fileName) {
@@ -154,11 +178,8 @@
                 const layer = e.target;
                 const id = L.stamp(layer);
                 const d = layer.get_distance() / 1000;
-                
                 totalDistance += d;
                 updateStats(Object.keys(window.tracksData).length + 1);
-
-                layer.bindTooltip(`<b>${name}</b><br>${d.toFixed(1)} km`, { sticky: true });
 
                 const item = document.createElement('div');
                 item.className = 'track-item';
@@ -169,8 +190,8 @@
                         <span class="track-dist">${d.toFixed(1)} km</span>
                     </div>
                     <div class="controls">
-                        <button class="btn-action btn-hide" onclick="toggleVisibility('${id}')" title="Mostra/Nascondi">👁</button>
-                        <a href="${url}" class="btn-action btn-download" download title="Download">↓</a>
+                        <button class="btn-action btn-hide" onclick="toggleVisibility('${id}')">👁</button>
+                        <a href="${url}" class="btn-action btn-download" download>↓</a>
                     </div>
                 `;
                 document.getElementById('track-list').appendChild(item);
