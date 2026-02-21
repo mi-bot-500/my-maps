@@ -236,4 +236,13 @@
             });
         }
 
-        function toggleSidebar() { document
+        function toggleSidebar() { document.getElementById('sidebar').classList.toggle('hidden'); setTimeout(() => map.invalidateSize(), 350); }
+
+        loadAllTracks();
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
