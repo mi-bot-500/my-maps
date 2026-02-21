@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>My Maps Pro - Ultimate Swipe</title>
+    <title>My Maps Pro - Full Edition</title>
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -90,7 +90,6 @@
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
 
     <script>
-        // --- 1. LAYERS (Все сохранены) ---
         const baseLayers = {
             "Google Rilievo": L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
             "Google Satellite": L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
@@ -104,14 +103,12 @@
 
         const map = L.map('map', { center: [45.46, 9.19], zoom: 7, layers: [baseLayers["Google Rilievo"]], zoomControl: false });
 
-        // --- 2. CONTROLS (Все на месте) ---
         const elevationControl = L.control.elevation({ position: "bottomright", theme: "skyblue-theme", width: 400, height: 150, collapsed: false, detached: false }).addTo(map);
         L.control.zoom({ position: 'bottomright' }).addTo(map);
         L.control.layers(baseLayers, overlays).addTo(map);
         L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
         L.control.locate({ position: 'bottomright', flyTo: true }).addTo(map);
 
-        // Кнопка Share
         const ShareControl = L.Control.extend({
             options: { position: 'bottomright' },
             onAdd: function() {
@@ -127,23 +124,19 @@
         });
         map.addControl(new ShareControl());
 
-        // --- 3. SWIPE LOGIC (In & Out) ---
         let touchStartX = 0;
         const sidebar = document.getElementById('sidebar');
 
-        // Свайп влево на панели (закрытие)
         sidebar.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
         sidebar.addEventListener('touchend', e => {
             if (touchStartX - e.changedTouches[0].screenX > 60) { if (!sidebar.classList.contains('hidden')) toggleSidebar(); }
         }, {passive: true});
 
-        // Свайп вправо на карте (открытие)
         document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
         document.addEventListener('touchend', e => {
             if (e.changedTouches[0].screenX - touchStartX > 80 && touchStartX < 50) { if (sidebar.classList.contains('hidden')) toggleSidebar(); }
         }, {passive: true});
 
-        // --- 4. DATA & CORE (Всё проверено) ---
         const user = 'mi-bot-500', repo = 'my-maps', folder = 'tracks';
         const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${folder}`;
         window.tracksData = {};
@@ -157,7 +150,6 @@
             return !!match;
         }
 
-        // ПРЕЖНИЙ ФУНКЦИОНАЛ DOWNLOAD (Прямое скачивание)
         async function downloadFile(url, filename) {
             try {
                 const response = await fetch(url);
@@ -184,14 +176,20 @@
         function renderTrack(url, fileName) {
             const color = ['#FF5733', '#28a745', '#007bff', '#F333FF', '#E67E22', '#1ABC9C'][Math.floor(Math.random()*6)];
             const name = fileName.replace('.gpx', '');
+            
             new L.GPX(url, {
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-                polyline_options: { color: color, weight: 5, opacity: 0.8 }
+                polyline_options: { color: color, weight: 5, opacity: 0.8 },
+                // ВОССТАНОВЛЕННЫЕ ТУЛТИПЫ
+                tooltip_options: { sticky: true }
             }).on('loaded', async function(e) {
                 const layer = e.target, id = L.stamp(layer), d = layer.get_distance() / 1000, cached = await isCached(url);
+                layer.bindTooltip(name); // Привязка текста тултипа
+                
                 totalDistance += d;
                 updateStats(Object.keys(window.tracksData).length + 1);
+                
                 const item = document.createElement('div');
                 item.className = 'track-item';
                 item.id = `item-${id}`;
