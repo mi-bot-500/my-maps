@@ -19,29 +19,11 @@
 
     <script>
         // 1. Configurazione livelli
-        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap'
-        });
-
-        var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenTopoMap'
-        });
-
-        var esriTerrain = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-            attribution: '© Esri Terrain'
-        });
-
-        var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains:['mt0','mt1','mt2','mt3'],
-            attribution: '© Google Maps'
-        });
-
-        var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains:['mt0','mt1','mt2','mt3'],
-            attribution: '© Google Maps'
-        });
+        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' });
+        var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', { attribution: '© OpenTopoMap' });
+        var esriTerrain = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', { attribution: '© Esri Terrain' });
+        var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google Maps' });
+        var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google Maps' });
 
         // 2. Inizializzazione mappa
         var map = L.map('map', {
@@ -58,20 +40,42 @@
             "Mappa Topografica": topo,
             "Standard OSM": osm
         };
-
         L.control.layers(baseMaps).addTo(map);
 
-        // 4. Caricamento tracce
-        var tracks = ['tracks/1.gpx', 'tracks/track-2026-02-21.gpx'];
+        // --- НОВАЯ ЧАСТЬ: Автоматическое получение списка файлов через GitHub API ---
+        const user = 'mi-bot-500';
+        const repo = 'my-maps';
+        const folder = 'tracks';
+        const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${folder}`;
 
-        tracks.forEach(function(url) {
+        async function loadAllTracks() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error('Errore nel caricamento della lista file');
+                
+                const files = await response.json();
+                
+                // Фильтруем только .gpx файлы
+                const gpxFiles = files.filter(file => file.name.toLowerCase().endsWith('.gpx'));
+
+                gpxFiles.forEach(file => {
+                    // Используем file.path для корректного пути
+                    renderTrack(file.path);
+                });
+            } catch (error) {
+                console.error('Errore:', error);
+                alert('Impossibile caricare i file dalla cartella tracks. Controlla la console.');
+            }
+        }
+
+        function renderTrack(url) {
             new L.GPX(url, {
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
                 polyline_options: { color: '#0000FF', weight: 4, opacity: 0.6 }
             }).on('loaded', function(e) {
                 var gpx = e.target;
-                var name = gpx.get_name() || "Percorso";
+                var name = gpx.get_name() || url.split('/').pop();
                 var dist = (gpx.get_distance() / 1000).toFixed(2);
                 var date = gpx.get_start_time() ? gpx.get_start_time().toLocaleDateString('it-IT') : "---";
 
@@ -85,7 +89,6 @@
                     layer.on('mouseout', function() {
                         layer.setStyle({ color: '#0000FF', weight: 4, opacity: 0.6 });
                     });
-
                     layer.on('contextmenu', function(evt) {
                         L.DomEvent.stopPropagation(evt);
                         if (confirm("Scaricare il file " + url.split('/').pop() + "?")) {
@@ -97,9 +100,13 @@
                     });
                 });
 
+                // Подгоняем карту под все треки (опционально)
                 map.fitBounds(gpx.getBounds());
             }).addTo(map);
-        });
+        }
+
+        // Запуск
+        loadAllTracks();
     </script>
 </body>
 </html>
