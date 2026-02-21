@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>My Maps Pro - Ultimate Offline Edition</title>
+    <title>My Maps Pro - Ultimate Edition</title>
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="MyTracks">
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/854/854878.png">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -46,7 +45,6 @@
         .track-name { font-weight: 600; font-size: 13px; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .track-dist { font-size: 11px; color: #666; background: #eee; padding: 2px 6px; border-radius: 10px; align-self: flex-start; margin-top: 4px; }
         
-        /* Offline Badge Styles */
         .offline-badge { font-size: 9px; padding: 2px 5px; border-radius: 4px; background: #eee; color: #999; text-transform: uppercase; margin-left: 5px; }
         .offline-ready { background: #d4edda; color: #155724; font-weight: bold; }
 
@@ -74,8 +72,8 @@
         <div class="search-area">
             <input type="text" id="search-input" placeholder="Cerca percorso..." oninput="filterTracks()">
             <div class="bulk-actions">
-                <button class="btn-small" onclick="bulkVisibility(true)">Mostra tutto</button>
-                <button class="btn-small" onclick="bulkVisibility(false)">Nascondi tutto</button>
+                <button class="btn-small" onclick="bulkVisibility(true)">Mostра всё</button>
+                <button class="btn-small" onclick="bulkVisibility(false)">Скрыть всё</button>
             </div>
         </div>
         <div id="track-list"></div>
@@ -91,7 +89,6 @@
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
 
     <script>
-        // --- 1. ВСЕ СЛОИ (Google, Esri, OSM) ---
         const baseLayers = {
             "Google Rilievo": L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
             "Google Satellite": L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
@@ -108,7 +105,6 @@
 
         const map = L.map('map', { center: [45.46, 9.19], zoom: 7, layers: [baseLayers["Google Rilievo"]], zoomControl: false });
 
-        // --- 2. КОНТРОЛЛЕРЫ ---
         const elevationControl = L.control.elevation({
             position: "bottomright", theme: "skyblue-theme", width: 400, height: 150,
             useHeightIndicator: true, collapsed: false, detached: false, summary: 'inline',
@@ -119,7 +115,6 @@
         L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
         L.control.locate({ position: 'bottomright', flyTo: true, keepCurrentZoomLevel: true }).addTo(map);
 
-        // Кнопка Share
         const ShareControl = L.Control.extend({
             options: { position: 'bottomright' },
             onAdd: function() {
@@ -136,7 +131,6 @@
         });
         map.addControl(new ShareControl());
 
-        // --- 3. ДАННЫЕ И КЭШ ---
         const user = 'mi-bot-500', repo = 'my-maps', folder = 'tracks';
         const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${folder}`;
         window.tracksData = {};
@@ -155,26 +149,26 @@
                 const files = await response.json();
                 const gpxFiles = files.filter(f => f.name.toLowerCase().endsWith('.gpx'));
                 document.getElementById('track-list').innerHTML = '';
-                
                 for (const file of gpxFiles) {
-                    await renderTrack(file.download_url, file.name);
+                    renderTrack(file.download_url, file.name);
                 }
             } catch (e) { console.error(e); }
         }
 
-        async function renderTrack(url, fileName) {
+        function renderTrack(url, fileName) {
             const color = ['#FF5733', '#28a745', '#007bff', '#F333FF', '#E67E22', '#1ABC9C'][Math.floor(Math.random()*6)];
             const name = fileName.replace('.gpx', '');
-            const cached = await isCached(url);
 
             const gpx = new L.GPX(url, {
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
                 polyline_options: { color: color, weight: 5, opacity: 0.8 }
-            }).on('loaded', function(e) {
+            }).on('loaded', async function(e) {
                 const layer = e.target;
                 const id = L.stamp(layer);
                 const d = layer.get_distance() / 1000;
+                const cached = await isCached(url);
+
                 totalDistance += d;
                 updateStats(Object.keys(window.tracksData).length + 1);
 
@@ -191,6 +185,7 @@
                     </div>
                     <div class="controls">
                         <button class="btn-action btn-hide" onclick="toggleVisibility('${id}')">👁</button>
+                        <a href="${url}" class="btn-action btn-download" download>↓</a>
                     </div>
                 `;
                 document.getElementById('track-list').appendChild(item);
@@ -207,10 +202,15 @@
             const track = window.tracksData[id];
             if (track && map.hasLayer(track)) {
                 map.fitBounds(track.getBounds(), { padding: [50, 50] });
+                // Исправлено: загружаем высоту только для этого трека
+                elevationControl.clear();
                 elevationControl.load(url);
+                
                 const badge = element.querySelector('.offline-badge');
-                badge.innerText = '✅ Ready';
-                badge.classList.add('offline-ready');
+                if (badge) {
+                    badge.innerText = '✅ Ready';
+                    badge.classList.add('offline-ready');
+                }
             }
         }
 
