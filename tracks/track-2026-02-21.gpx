@@ -442,5 +442,21 @@
         <radio a_op="vodafone IT" a_rat="LTE" a_q="10.00" a_rsrp="-110" a_sinr="2" a_rsrq="-15" b_op="I TIM" b_rat="LTE" b_q="8.00" b_rsrp="-113" b_sinr="2" b_rsrq="-11"/>
       </extensions>
     </trkpt>
+    <trkpt lat="45.6025726" lon="10.4536576">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:25:03.259+01:00</time>
+      <extensions>
+        <activity type="3" conf="100" state="still" tsMs="1771673093009"/>
+        <radio a_op="vodafone IT" a_rat="LTE" a_q="9.00" a_rsrp="-113" a_sinr="3" a_rsrq="-12" b_op="I TIM" b_rat="LTE" b_q="4.00" b_rsrp="-118" b_sinr="1" b_rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025726" lon="10.4536576">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:25:03.259+01:00</time>
+      <extensions>
+        <activity type="3" conf="100" state="still" tsMs="1771673093009"/>
+        <radio a_op="vodafone IT" a_rat="LTE" a_q="9.00" a_rsrp="-113" a_sinr="3" a_rsrq="-12" b_op="I TIM" b_rat="LTE" b_q="4.00" b_rsrp="-118" b_sinr="1" b_rsrq="-11"/>
+      </extensions>
+    </trkpt>
   </trkseg></trk>
 </gpx>
