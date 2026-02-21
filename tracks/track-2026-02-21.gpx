@@ -458,5 +458,86 @@
         <radio a_op="vodafone IT" a_rat="LTE" a_q="9.00" a_rsrp="-113" a_sinr="3" a_rsrq="-12" b_op="I TIM" b_rat="LTE" b_q="4.00" b_rsrp="-118" b_sinr="1" b_rsrq="-11"/>
       </extensions>
     </trkpt>
+    <trkpt lat="45.6025724" lon="10.453657">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:32:18.729+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1771673520725"/>
+        <radio op="vodafone IT" rat="LTE" q="6.00" rsrp="-112" sinr="0" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="16.00" rsrp="-112" sinr="8" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025724" lon="10.453657">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:32:18.729+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1771673538577"/>
+        <radio op="vodafone IT" rat="LTE" q="6.00" rsrp="-112" sinr="0" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="16.00" rsrp="-112" sinr="8" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025724" lon="10.453657">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:32:18.729+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1771673538577"/>
+        <radio op="vodafone IT" rat="LTE" q="6.00" rsrp="-112" sinr="0" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="16.00" rsrp="-112" sinr="8" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025724" lon="10.453657">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:33:30.918+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1771673605386"/>
+        <radio op="vodafone IT" rat="LTE" q="9.00" rsrp="-112" sinr="2" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="16.00" rsrp="-112" sinr="8" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025724" lon="10.453657">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:33:30.918+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1771673605386"/>
+        <radio op="vodafone IT" rat="LTE" q="17.00" rsrp="-109" sinr="6" rsrq="-15"/>
+        <radio op="I TIM" rat="LTE" q="27.00" rsrp="-110" sinr="13" rsrq="-5"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025724" lon="10.453657">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:33:30.918+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1771673605386"/>
+        <radio op="vodafone IT" rat="LTE" q="17.00" rsrp="-109" sinr="6" rsrq="-15"/>
+        <radio op="I TIM" rat="LTE" q="27.00" rsrp="-110" sinr="13" rsrq="-5"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025729" lon="10.4536581">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:34:12.668+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1771673642367"/>
+        <radio op="vodafone IT" rat="LTE" q="17.00" rsrp="-109" sinr="6" rsrq="-15"/>
+        <radio op="I TIM" rat="LTE" q="27.00" rsrp="-110" sinr="13" rsrq="-5"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025729" lon="10.4536581">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:34:12.668+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1771673642367"/>
+        <radio op="vodafone IT" rat="LTE" q="17.00" rsrp="-109" sinr="6" rsrq="-15"/>
+        <radio op="I TIM" rat="LTE" q="27.00" rsrp="-110" sinr="13" rsrq="-5"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.602582" lon="10.453646">
+      <ele>262.4000244140625</ele>
+      <time>2026-02-21T12:35:14.52+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1771673704185"/>
+        <radio op="vodafone IT" rat="LTE" q="21.00" rsrp="-104" sinr="5" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="28.00" rsrp="-110" sinr="14" rsrq="-5"/>
+      </extensions>
+    </trkpt>
   </trkseg></trk>
 </gpx>
