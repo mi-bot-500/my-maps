@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>My Maps Pro - PWA Edition</title>
+    <title>My Maps Pro - Ultimate Offline Edition</title>
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -33,7 +33,7 @@
         }
         #sidebar.hidden + #toggle-btn { left: 20px; }
 
-        .header { padding: 15px; background: #007bff; color: white; padding-top: 40px; } /* Отступ для iPhone Notch */
+        .header { padding: 15px; background: #007bff; color: white; padding-top: 40px; }
         .stats { font-size: 11px; opacity: 0.9; margin-top: 5px; display: flex; gap: 10px; }
         .search-area { padding: 10px; border-bottom: 1px solid #eee; background: #fafafa; }
         #search-input { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
@@ -46,15 +46,17 @@
         .track-name { font-weight: 600; font-size: 13px; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .track-dist { font-size: 11px; color: #666; background: #eee; padding: 2px 6px; border-radius: 10px; align-self: flex-start; margin-top: 4px; }
         
+        /* Offline Badge Styles */
+        .offline-badge { font-size: 9px; padding: 2px 5px; border-radius: 4px; background: #eee; color: #999; text-transform: uppercase; margin-left: 5px; }
+        .offline-ready { background: #d4edda; color: #155724; font-weight: bold; }
+
         .controls { display: flex; gap: 8px; }
         .btn-action { width: 34px; height: 34px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; color: white; text-decoration: none; }
         .btn-hide { background: #6c757d; }
         .btn-hide.hidden-track { background: #dc3545; }
         .btn-download { background: #28a745; }
 
-        /* Стили для кнопки Share */
         .leaflet-control-share { background: white; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 4px; box-shadow: 0 1px 5px rgba(0,0,0,0.4); font-size: 18px; }
-
         .leaflet-bottom.leaflet-right { margin-bottom: 25px; margin-right: 10px; z-index: 800; }
         .elevation-control.leaflet-control { background: rgba(255, 255, 255, 0.9) !important; border-radius: 8px; }
     </style>
@@ -63,7 +65,7 @@
 
     <div id="sidebar">
         <div class="header">
-            <h3 style="margin:0; font-size: 16px;">📍 MyTracks PWA</h3>
+            <h3 style="margin:0; font-size: 16px;">📍 Tracce & Altimetria Pro</h3>
             <div class="stats">
                 <span id="stat-count">Tracce: 0</span>
                 <span id="stat-dist">Totale: 0 km</span>
@@ -89,12 +91,14 @@
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
 
     <script>
-        // --- 1. LAYERS ---
+        // --- 1. ВСЕ СЛОИ (Google, Esri, OSM) ---
         const baseLayers = {
             "Google Rilievo": L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
             "Google Satellite": L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
             "Google Ibrido": L.tileLayer('http://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
+            "Esri Imagery": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: '© Esri' }),
             "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OSM' }),
+            "Topografica (OTM)": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', { attribution: '© OTM' }),
             "Ciclabile (CyclOSM)": L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: '© CyclOSM' })
         };
 
@@ -102,59 +106,48 @@
             "Percorsi Hiking": L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', { opacity: 0.7, attribution: '© Waymarked Trails' })
         };
 
-        const map = L.map('map', { 
-            center: [45.46, 9.19], zoom: 7, 
-            layers: [baseLayers["Google Rilievo"]], zoomControl: false 
-        });
+        const map = L.map('map', { center: [45.46, 9.19], zoom: 7, layers: [baseLayers["Google Rilievo"]], zoomControl: false });
 
-        // --- 2. CONTROLS ---
+        // --- 2. КОНТРОЛЛЕРЫ ---
         const elevationControl = L.control.elevation({
             position: "bottomright", theme: "skyblue-theme", width: 400, height: 150,
             useHeightIndicator: true, collapsed: false, detached: false, summary: 'inline',
         }).addTo(map);
 
         L.control.zoom({ position: 'bottomright' }).addTo(map);
-        L.control.layers(baseLayers, overlays, { collapsed: true }).addTo(map);
+        L.control.layers(baseLayers, overlays).addTo(map);
+        L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
+        L.control.locate({ position: 'bottomright', flyTo: true, keepCurrentZoomLevel: true }).addTo(map);
 
-        const lc = L.control.locate({
-            position: 'bottomright',
-            flyTo: true,
-            keepCurrentZoomLevel: true,
-            strings: { title: "Posizione" }
-        }).addTo(map);
-
-        // --- 3. SHARE LOCATION FUNCTION ---
+        // Кнопка Share
         const ShareControl = L.Control.extend({
             options: { position: 'bottomright' },
             onAdd: function() {
-                const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-share');
-                container.innerHTML = '📤';
-                container.onclick = function() {
+                const c = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-share');
+                c.innerHTML = '📤';
+                c.onclick = () => {
                     const center = map.getCenter();
                     const url = `https://www.google.com/maps?q=${center.lat},${center.lng}`;
-                    if (navigator.share) {
-                        navigator.share({ title: 'La mia posizione', url: url });
-                    } else {
-                        alert("Link copiato: " + url);
-                        navigator.clipboard.writeText(url);
-                    }
+                    if (navigator.share) navigator.share({ title: 'Posizione', url: url });
+                    else { alert("Copiato: " + url); navigator.clipboard.writeText(url); }
                 };
-                return container;
+                return c;
             }
         });
         map.addControl(new ShareControl());
 
-        // --- 4. DATA LOADING (GITHUB) ---
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('hidden');
-            setTimeout(() => { map.invalidateSize(); }, 350);
-        }
-
+        // --- 3. ДАННЫЕ И КЭШ ---
         const user = 'mi-bot-500', repo = 'my-maps', folder = 'tracks';
         const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${folder}`;
         window.tracksData = {};
         let totalDistance = 0;
+
+        async function isCached(url) {
+            if (!('caches' in window)) return false;
+            const cache = await caches.open('my-tracks-v2');
+            const match = await cache.match(url);
+            return !!match;
+        }
 
         async function loadAllTracks() {
             try {
@@ -162,13 +155,17 @@
                 const files = await response.json();
                 const gpxFiles = files.filter(f => f.name.toLowerCase().endsWith('.gpx'));
                 document.getElementById('track-list').innerHTML = '';
-                gpxFiles.forEach(file => renderTrack(file.download_url, file.name));
-            } catch (e) { console.error("Error:", e); }
+                
+                for (const file of gpxFiles) {
+                    await renderTrack(file.download_url, file.name);
+                }
+            } catch (e) { console.error(e); }
         }
 
-        function renderTrack(url, fileName) {
+        async function renderTrack(url, fileName) {
             const color = ['#FF5733', '#28a745', '#007bff', '#F333FF', '#E67E22', '#1ABC9C'][Math.floor(Math.random()*6)];
             const name = fileName.replace('.gpx', '');
+            const cached = await isCached(url);
 
             const gpx = new L.GPX(url, {
                 async: true,
@@ -185,13 +182,15 @@
                 item.className = 'track-item';
                 item.id = `item-${id}`;
                 item.innerHTML = `
-                    <div class="track-clickable" onclick="focusTrack('${id}', '${url}')">
+                    <div class="track-clickable" onclick="focusTrack('${id}', '${url}', this)">
                         <span class="track-name" style="color:${color}">${name}</span>
-                        <span class="track-dist">${d.toFixed(1)} km</span>
+                        <div style="display:flex; align-items:center; gap:5px;">
+                            <span class="track-dist">${d.toFixed(1)} km</span>
+                            <span class="offline-badge ${cached ? 'offline-ready' : ''}">${cached ? '✅ Ready' : 'Cloud'}</span>
+                        </div>
                     </div>
                     <div class="controls">
                         <button class="btn-action btn-hide" onclick="toggleVisibility('${id}')">👁</button>
-                        <a href="${url}" class="btn-action btn-download" download>↓</a>
                     </div>
                 `;
                 document.getElementById('track-list').appendChild(item);
@@ -204,42 +203,28 @@
             document.getElementById('stat-dist').innerText = `Totale: ${totalDistance.toFixed(1)} km`;
         }
 
-        function focusTrack(id, url) {
+        function focusTrack(id, url, element) {
             const track = window.tracksData[id];
             if (track && map.hasLayer(track)) {
                 map.fitBounds(track.getBounds(), { padding: [50, 50] });
-                elevationControl.clear();
                 elevationControl.load(url);
+                const badge = element.querySelector('.offline-badge');
+                badge.innerText = '✅ Ready';
+                badge.classList.add('offline-ready');
             }
         }
 
         function toggleVisibility(id) {
-            const track = window.tracksData[id];
-            const btn = document.querySelector(`#item-${id} .btn-hide`);
-            if (map.hasLayer(track)) {
-                map.removeLayer(track);
-                btn.classList.add('hidden-track');
-                btn.innerText = '✕';
-            } else {
-                map.addLayer(track);
-                btn.classList.remove('hidden-track');
-                btn.innerText = '👁';
-            }
+            const track = window.tracksData[id], btn = document.querySelector(`#item-${id} .btn-hide`);
+            if (map.hasLayer(track)) { map.removeLayer(track); btn.innerText = '✕'; btn.classList.add('hidden-track'); }
+            else { map.addLayer(track); btn.innerText = '👁'; btn.classList.remove('hidden-track'); }
         }
 
         function bulkVisibility(show) {
             Object.keys(window.tracksData).forEach(id => {
-                const track = window.tracksData[id];
-                const btn = document.querySelector(`#item-${id} .btn-hide`);
-                if (show && !map.hasLayer(track)) {
-                    map.addLayer(track);
-                    btn.classList.remove('hidden-track');
-                    btn.innerText = '👁';
-                } else if (!show && map.hasLayer(track)) {
-                    map.removeLayer(track);
-                    btn.classList.add('hidden-track');
-                    btn.innerText = '✕';
-                }
+                const track = window.tracksData[id], btn = document.querySelector(`#item-${id} .btn-hide`);
+                if (show && !map.hasLayer(track)) { map.addLayer(track); btn.innerText = '👁'; btn.classList.remove('hidden-track'); }
+                else if (!show && map.hasLayer(track)) { map.removeLayer(track); btn.innerText = '✕'; btn.classList.add('hidden-track'); }
             });
         }
 
@@ -251,7 +236,4 @@
             });
         }
 
-        loadAllTracks();
-    </script>
-</body>
-</html>
+        function toggleSidebar() { document
