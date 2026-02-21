@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Maps - Full Version with Search</title>
+    <title>My Maps - Pro Layers</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; }
         #map { height: 100vh; width: 100%; z-index: 1; }
-        
         #sidebar { 
             position: absolute; top: 0; left: 0; width: 300px; height: 100%; 
             background: white; z-index: 1000; transition: transform 0.3s ease; 
             box-shadow: 2px 0 5px rgba(0,0,0,0.1); display: flex; flex-direction: column;
         }
         #sidebar.hidden { transform: translateX(-300px); }
-        
         #toggle-btn { 
             position: absolute; top: 20px; left: 310px; z-index: 1100; 
             background: white; border: none; padding: 10px 15px; cursor: pointer; 
@@ -23,42 +21,19 @@
             transition: left 0.3s ease; font-size: 18px;
         }
         #sidebar.hidden + #toggle-btn { left: 20px; }
-
-        /* Поиск */
         .search-container { padding: 10px; border-bottom: 1px solid #eee; }
-        #search-input { 
-            width: 100%; padding: 8px; border: 1px solid #ccc; 
-            border-radius: 4px; box-sizing: border-box; font-size: 14px;
-        }
-
+        #search-input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
         .leaflet-bottom.leaflet-right { margin-bottom: 25px; margin-right: 10px; }
-
         #track-list { overflow-y: auto; flex-grow: 1; }
-        .track-item { 
-            padding: 12px; display: flex; align-items: center; 
-            border-bottom: 1px solid #eee; gap: 10px; 
-        }
-        .track-clickable { 
-            cursor: pointer; flex-grow: 1; display: flex; 
-            flex-direction: column; overflow: hidden; 
-        }
-        .track-name { 
-            font-weight: 600; font-size: 13px; white-space: nowrap; 
-            overflow: hidden; text-overflow: ellipsis; margin-bottom: 4px;
-        }
-        .track-info-row { display: flex; align-items: center; gap: 8px; }
-        .track-dist { font-size: 11px; color: #666; background: #eee; padding: 2px 6px; border-radius: 10px; }
-        
+        .track-item { padding: 12px; display: flex; align-items: center; border-bottom: 1px solid #eee; gap: 10px; }
+        .track-clickable { cursor: pointer; flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; }
+        .track-name { font-weight: 600; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .track-dist { font-size: 11px; color: #666; background: #eee; padding: 2px 6px; border-radius: 10px; align-self: flex-start; margin-top: 4px; }
         .controls { display: flex; gap: 8px; }
-        .btn-action { 
-            width: 32px; height: 32px; border-radius: 50%; border: none;
-            display: flex; align-items: center; justify-content: center; 
-            cursor: pointer; font-size: 16px; text-decoration: none; color: white;
-        }
+        .btn-action { width: 32px; height: 32px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 16px; text-decoration: none; color: white; }
         .btn-hide { background: #6c757d; }
         .btn-hide.hidden-track { background: #dc3545; }
         .btn-download { background: #28a745; }
-
         .track-tooltip { font-size: 12px; font-weight: bold; padding: 4px 8px; }
     </style>
 </head>
@@ -81,13 +56,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
 
     <script>
+        // --- БАЗОВЫЕ СЛОИ (Основа) ---
         const baseLayers = {
             "Google Rilievo": L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'] }),
             "Google Satellite": L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'] }),
-            "Google Ibrido": L.tileLayer('http://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'] }),
+            "Esri World Imagery": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: '© Esri' }),
             "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
-            "Topografica": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'),
-            "Ciclabile": L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png')
+            "Topografica (OTM)": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'),
+            "Hike & Bike": L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png')
+        };
+
+        // --- ОВЕРЛЕИ (Накладываются сверху) ---
+        const overlays = {
+            "Percorsi Segnati (Hiking)": L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
+                attribution: '© Waymarked Trails',
+                opacity: 0.7
+            })
         };
 
         const map = L.map('map', { 
@@ -96,7 +80,8 @@
         });
 
         L.control.zoom({ position: 'bottomright' }).addTo(map);
-        L.control.layers(baseLayers, null, { collapsed: true }).addTo(map);
+        // Добавляем выбор и баз, и оверлеев
+        L.control.layers(baseLayers, overlays, { collapsed: true }).addTo(map);
 
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
@@ -139,7 +124,6 @@
                 const layer = e.target;
                 const id = L.stamp(layer);
                 const dist = (layer.get_distance() / 1000).toFixed(1);
-
                 layer.bindTooltip(`<b>${name}</b><br>${dist} km`, { sticky: true, className: 'track-tooltip' });
 
                 const item = document.createElement('div');
@@ -148,11 +132,11 @@
                 item.innerHTML = `
                     <div class="track-clickable" onclick="focusTrack('${id}')">
                         <span class="track-name" style="color:${color}">${name}</span>
-                        <div class="track-info-row"><span class="track-dist">${dist} km</span></div>
+                        <span class="track-dist">${dist} km</span>
                     </div>
                     <div class="controls">
-                        <button class="btn-action btn-hide" onclick="toggleVisibility('${id}')" title="👁">👁</button>
-                        <a href="${url}" class="btn-action btn-download" download title="↓">↓</a>
+                        <button class="btn-action btn-hide" onclick="toggleVisibility('${id}')">👁</button>
+                        <a href="${url}" class="btn-action btn-download" download>↓</a>
                     </div>
                 `;
                 document.getElementById('track-list').appendChild(item);
@@ -162,9 +146,7 @@
 
         function focusTrack(id) {
             const track = window.tracksData[id];
-            if (track && map.hasLayer(track)) {
-                map.fitBounds(track.getBounds(), { padding: [50, 50] });
-            }
+            if (track && map.hasLayer(track)) map.fitBounds(track.getBounds(), { padding: [50, 50] });
         }
 
         function toggleVisibility(id) {
@@ -180,7 +162,6 @@
                 btn.innerText = '👁';
             }
         }
-
         loadAllTracks();
     </script>
 </body>
