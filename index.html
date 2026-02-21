@@ -5,12 +5,38 @@
     <title>Mappa GPX Personale</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
-        #map { height: 100vh; width: 100%; margin: 0; }
-        body { margin: 0; padding: 0; }
+        body { margin: 0; padding: 0; display: flex; font-family: sans-serif; }
+        #sidebar { 
+            width: 300px; 
+            height: 100vh; 
+            overflow-y: auto; 
+            background: #f8f9fa; 
+            border-right: 1px solid #ccc;
+            z-index: 1000;
+        }
+        #map { flex-grow: 1; height: 100vh; }
+        .track-item { 
+            padding: 10px; 
+            border-bottom: 1px solid #eee; 
+            cursor: pointer; 
+            transition: background 0.2s;
+        }
+        .track-item:hover { background: #e9ecef; }
+        .track-item b { display: block; color: #007bff; }
+        .track-info { font-size: 12px; color: #666; }
         .leaflet-tooltip { font-size: 14px; padding: 10px; border-radius: 8px; }
     </style>
 </head>
 <body>
+
+    <div id="sidebar">
+        <div style="padding: 15px; background: #007bff; color: white;">
+            <h3 style="margin:0;">I miei percorsi</h3>
+        </div>
+        <div id="track-list">
+            <p style="padding: 15px;">Caricamento tracce...</p>
+        </div>
+    </div>
 
     <div id="map"></div>
 
@@ -19,30 +45,19 @@
 
     <script>
         // 1. Configurazione livelli
-        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' });
-        var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', { attribution: '© OpenTopoMap' });
-        var esriTerrain = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', { attribution: '© Esri Terrain' });
-        var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google Maps' });
-        var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google Maps' });
-
-        // 2. Inizializzazione mappa
-        var map = L.map('map', {
-            center: [0, 0],
-            zoom: 2,
-            layers: [googleTerrain]
+        var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+            maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google Maps'
+        });
+        var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google Maps'
         });
 
-        // 3. Menu livelli
-        var baseMaps = {
-            "Google Rilievo": googleTerrain,
-            "Google Satellite": googleSat,
-            "Esri Rilievo": esriTerrain,
-            "Mappa Topografica": topo,
-            "Standard OSM": osm
-        };
+        var map = L.map('map', { center: [0, 0], zoom: 2, layers: [googleTerrain] });
+
+        var baseMaps = { "Rilievo": googleTerrain, "Satellite": googleSat };
         L.control.layers(baseMaps).addTo(map);
 
-        // --- НОВАЯ ЧАСТЬ: Автоматическое получение списка файлов через GitHub API ---
+        // 2. Configurazione GitHub
         const user = 'mi-bot-500';
         const repo = 'my-maps';
         const folder = 'tracks';
@@ -51,61 +66,52 @@
         async function loadAllTracks() {
             try {
                 const response = await fetch(apiUrl);
-                if (!response.ok) throw new Error('Errore nel caricamento della lista file');
-                
+                if (!response.ok) throw new Error('Errore API');
                 const files = await response.json();
+                const gpxFiles = files.filter(f => f.name.toLowerCase().endsWith('.gpx'));
                 
-                // Фильтруем только .gpx файлы
-                const gpxFiles = files.filter(file => file.name.toLowerCase().endsWith('.gpx'));
-
-                gpxFiles.forEach(file => {
-                    // Используем file.path для корректного пути
-                    renderTrack(file.path);
-                });
+                document.getElementById('track-list').innerHTML = ''; // Очистка списка
+                gpxFiles.forEach(file => renderTrack(file.path, file.name));
             } catch (error) {
-                console.error('Errore:', error);
-                alert('Impossibile caricare i file dalla cartella tracks. Controlla la console.');
+                document.getElementById('track-list').innerHTML = '<p style="padding:15px; color:red;">Errore caricamento</p>';
             }
         }
 
-        function renderTrack(url) {
-            new L.GPX(url, {
+        function renderTrack(url, fileName) {
+            const trackLayer = new L.GPX(url, {
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
                 polyline_options: { color: '#0000FF', weight: 4, opacity: 0.6 }
             }).on('loaded', function(e) {
-                var gpx = e.target;
-                var name = gpx.get_name() || url.split('/').pop();
-                var dist = (gpx.get_distance() / 1000).toFixed(2);
-                var date = gpx.get_start_time() ? gpx.get_start_time().toLocaleDateString('it-IT') : "---";
+                const gpx = e.target;
+                const name = gpx.get_name() || fileName;
+                const dist = (gpx.get_distance() / 1000).toFixed(2);
+                const date = gpx.get_start_time() ? gpx.get_start_time().toLocaleDateString('it-IT') : "N/D";
 
-                var info = `<b>${name}</b><br>📅 Data: ${date}<br>📏 Dist: ${dist} km<br>🖱️ <i>Tasto destro per scaricare</i>`;
+                // Создаем элемент в боковой панели
+                const item = document.createElement('div');
+                item.className = 'track-item';
+                item.innerHTML = `<b>${name}</b><div class="track-info">📏 ${dist} km | 📅 ${date}</div>`;
+                
+                // Клик по элементу в списке - зум на трек
+                item.onclick = () => {
+                    map.fitBounds(gpx.getBounds(), { padding: [50, 50] });
+                };
+                
+                document.getElementById('track-list').appendChild(item);
 
-                gpx.getLayers().forEach(function(layer) {
-                    layer.on('mouseover', function(evt) {
-                        layer.setStyle({ color: '#FF0000', weight: 6, opacity: 1 });
-                        layer.bindTooltip(info, { sticky: true }).openTooltip();
-                    });
-                    layer.on('mouseout', function() {
-                        layer.setStyle({ color: '#0000FF', weight: 4, opacity: 0.6 });
-                    });
-                    layer.on('contextmenu', function(evt) {
-                        L.DomEvent.stopPropagation(evt);
-                        if (confirm("Scaricare il file " + url.split('/').pop() + "?")) {
-                            var link = document.createElement('a');
-                            link.href = url;
-                            link.download = url.split('/').pop();
-                            link.click();
-                        }
-                    });
+                // Тултип на карте
+                const info = `<b>${name}</b><br>📏 ${dist} km<br>📅 ${date}`;
+                gpx.getLayers().forEach(layer => {
+                    layer.bindTooltip(info, { sticky: true });
+                    layer.on('mouseover', () => layer.setStyle({ color: '#FF0000', weight: 6 }));
+                    layer.on('mouseout', () => layer.setStyle({ color: '#0000FF', weight: 4 }));
                 });
-
-                // Подгоняем карту под все треки (опционально)
+                
                 map.fitBounds(gpx.getBounds());
             }).addTo(map);
         }
 
-        // Запуск
         loadAllTracks();
     </script>
 </body>
