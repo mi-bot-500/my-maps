@@ -63,7 +63,7 @@
 
     <div id="sidebar">
         <div class="header">
-            <h3 style="margin:0; font-size: 16px;">📍 Tracce & Altimetria Pro</h3>
+            <h3 style="margin:0; font-size: 16px;">📍 MyTracks Pro</h3>
             <div class="stats">
                 <span id="stat-count">Tracce: 0</span>
                 <span id="stat-dist">Totale: 0 km</span>
@@ -72,8 +72,8 @@
         <div class="search-area">
             <input type="text" id="search-input" placeholder="Cerca percorso..." oninput="filterTracks()">
             <div class="bulk-actions">
-                <button class="btn-small" onclick="bulkVisibility(true)">Mostра всё</button>
-                <button class="btn-small" onclick="bulkVisibility(false)">Скрыть всё</button>
+                <button class="btn-small" onclick="bulkVisibility(true)">Mostra tutto</button>
+                <button class="btn-small" onclick="bulkVisibility(false)">Nascondi tutto</button>
             </div>
         </div>
         <div id="track-list"></div>
@@ -134,6 +134,7 @@
         const user = 'mi-bot-500', repo = 'my-maps', folder = 'tracks';
         const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${folder}`;
         window.tracksData = {};
+        window.currentElevationTrack = null;
         let totalDistance = 0;
 
         async function isCached(url) {
@@ -141,6 +142,19 @@
             const cache = await caches.open('my-tracks-v2');
             const match = await cache.match(url);
             return !!match;
+        }
+
+        async function downloadFile(url, filename) {
+            try {
+                const response = await fetch(url);
+                const blob = await response.blob();
+                const link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } catch (e) { console.error("Download error:", e); }
         }
 
         async function loadAllTracks() {
@@ -184,8 +198,8 @@
                         </div>
                     </div>
                     <div class="controls">
-                        <button class="btn-action btn-hide" onclick="toggleVisibility('${id}')">👁</button>
-                        <a href="${url}" class="btn-action btn-download" download>↓</a>
+                        <button class="btn-action btn-hide" onclick="toggleVisibility('${id}', '${url}')">👁</button>
+                        <button class="btn-action btn-download" onclick="downloadFile('${url}', '${fileName}')">↓</button>
                     </div>
                 `;
                 document.getElementById('track-list').appendChild(item);
@@ -202,9 +216,9 @@
             const track = window.tracksData[id];
             if (track && map.hasLayer(track)) {
                 map.fitBounds(track.getBounds(), { padding: [50, 50] });
-                // Исправлено: загружаем высоту только для этого трека
                 elevationControl.clear();
                 elevationControl.load(url);
+                window.currentElevationTrack = url;
                 
                 const badge = element.querySelector('.offline-badge');
                 if (badge) {
@@ -214,17 +228,38 @@
             }
         }
 
-        function toggleVisibility(id) {
+        function toggleVisibility(id, url) {
             const track = window.tracksData[id], btn = document.querySelector(`#item-${id} .btn-hide`);
-            if (map.hasLayer(track)) { map.removeLayer(track); btn.innerText = '✕'; btn.classList.add('hidden-track'); }
-            else { map.addLayer(track); btn.innerText = '👁'; btn.classList.remove('hidden-track'); }
+            if (map.hasLayer(track)) { 
+                map.removeLayer(track); 
+                btn.innerText = '✕'; 
+                btn.classList.add('hidden-track');
+                // Очистка графика, если скрытый трек сейчас отображается
+                if (window.currentElevationTrack === url) {
+                    elevationControl.clear();
+                    window.currentElevationTrack = null;
+                }
+            } else { 
+                map.addLayer(track); 
+                btn.innerText = '👁'; 
+                btn.classList.remove('hidden-track'); 
+            }
         }
 
         function bulkVisibility(show) {
             Object.keys(window.tracksData).forEach(id => {
                 const track = window.tracksData[id], btn = document.querySelector(`#item-${id} .btn-hide`);
-                if (show && !map.hasLayer(track)) { map.addLayer(track); btn.innerText = '👁'; btn.classList.remove('hidden-track'); }
-                else if (!show && map.hasLayer(track)) { map.removeLayer(track); btn.innerText = '✕'; btn.classList.add('hidden-track'); }
+                if (show && !map.hasLayer(track)) { 
+                    map.addLayer(track); 
+                    btn.innerText = '👁'; 
+                    btn.classList.remove('hidden-track'); 
+                } else if (!show && map.hasLayer(track)) { 
+                    map.removeLayer(track); 
+                    btn.innerText = '✕'; 
+                    btn.classList.add('hidden-track'); 
+                    elevationControl.clear();
+                    window.currentElevationTrack = null;
+                }
             });
         }
 
