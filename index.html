@@ -2,62 +2,52 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Mappa GPX Personale</title>
+    <title>Mappa GPX</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
-        body { margin: 0; padding: 0; display: flex; font-family: sans-serif; }
-        #sidebar { 
-            width: 300px; 
-            height: 100vh; 
-            overflow-y: auto; 
-            background: #f8f9fa; 
-            border-right: 1px solid #ccc;
-            z-index: 1000;
-        }
+        body { margin: 0; padding: 0; display: flex; font-family: sans-serif; overflow: hidden; }
+        #sidebar { width: 280px; height: 100vh; background: #fff; border-right: 1px solid #ddd; transition: transform 0.3s ease; display: flex; flex-direction: column; z-index: 1001; }
+        #sidebar.hidden { transform: translateX(-280px); width: 0; }
+        #toggle-btn { position: absolute; left: 290px; top: 15px; z-index: 1002; width: 35px; height: 35px; background: #007bff; color: white; border: none; border-radius: 50%; cursor: pointer; transition: left 0.3s ease; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+        #sidebar.hidden + #toggle-btn { left: 15px; }
         #map { flex-grow: 1; height: 100vh; }
-        .track-item { 
-            padding: 10px; 
-            border-bottom: 1px solid #eee; 
-            cursor: pointer; 
-            transition: background 0.2s;
-        }
-        .track-item:hover { background: #e9ecef; }
-        .track-item b { display: block; color: #007bff; }
-        .track-info { font-size: 12px; color: #666; }
-        .leaflet-tooltip { font-size: 14px; padding: 10px; border-radius: 8px; }
+        #track-list { overflow-y: auto; flex-grow: 1; }
+        .track-item { display: flex; align-items: center; padding: 10px 15px; border-bottom: 1px solid #f0f0f0; gap: 10px; }
+        .track-clickable { cursor: pointer; flex-grow: 1; display: flex; justify-content: space-between; align-items: center; overflow: hidden; color: inherit; text-decoration: none; }
+        .track-name { font-weight: 600; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .track-dist { font-size: 11px; color: #666; background: #eee; padding: 2px 6px; border-radius: 10px; }
+        .btn-download { background: #28a745; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: bold; flex-shrink: 0; }
     </style>
 </head>
 <body>
 
     <div id="sidebar">
-        <div style="padding: 15px; background: #007bff; color: white;">
-            <h3 style="margin:0;">I miei percorsi</h3>
+        <div style="padding: 20px; background: #007bff; color: white;">
+            <h3 style="margin:0; font-size: 16px;">📍 I miei percorsi</h3>
         </div>
-        <div id="track-list">
-            <p style="padding: 15px;">Caricamento tracce...</p>
-        </div>
+        <div id="track-list"></div>
     </div>
 
+    <button id="toggle-btn" onclick="toggleSidebar()">☰</button>
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
 
     <script>
-        // 1. Configurazione livelli
-        var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
-            maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google Maps'
-        });
-        var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-            maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google Maps'
-        });
+        function toggleSidebar() { document.getElementById('sidebar').classList.toggle('hidden'); }
 
-        var map = L.map('map', { center: [0, 0], zoom: 2, layers: [googleTerrain] });
+        // Генерация случайного цвета
+        function getRandomColor() {
+            const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#FF33A8', '#33FFF6', '#FF8333', '#8D33FF'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
 
-        var baseMaps = { "Rilievo": googleTerrain, "Satellite": googleSat };
-        L.control.layers(baseMaps).addTo(map);
+        var map = L.map('map', { center: [0, 0], zoom: 2 });
+        L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+            maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google'
+        }).addTo(map);
 
-        // 2. Configurazione GitHub
         const user = 'mi-bot-500';
         const repo = 'my-maps';
         const folder = 'tracks';
@@ -66,50 +56,56 @@
         async function loadAllTracks() {
             try {
                 const response = await fetch(apiUrl);
-                if (!response.ok) throw new Error('Errore API');
                 const files = await response.json();
-                const gpxFiles = files.filter(f => f.name.toLowerCase().endsWith('.gpx'));
+                // Фильтр без учета регистра (.gpx, .GPX и т.д.)
+                const gpxFiles = files.filter(f => f.name.match(/\.(gpx)$/i));
                 
-                document.getElementById('track-list').innerHTML = ''; // Очистка списка
+                document.getElementById('track-list').innerHTML = '';
                 gpxFiles.forEach(file => renderTrack(file.path, file.name));
-            } catch (error) {
-                document.getElementById('track-list').innerHTML = '<p style="padding:15px; color:red;">Errore caricamento</p>';
+            } catch (e) {
+                console.error(e);
             }
         }
 
         function renderTrack(url, fileName) {
-            const trackLayer = new L.GPX(url, {
+            const trackColor = getRandomColor();
+            
+            new L.GPX(url, {
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-                polyline_options: { color: '#0000FF', weight: 4, opacity: 0.6 }
+                polyline_options: { color: trackColor, weight: 4, opacity: 0.7 }
             }).on('loaded', function(e) {
                 const gpx = e.target;
-                const name = gpx.get_name() || fileName;
-                const dist = (gpx.get_distance() / 1000).toFixed(2);
-                const date = gpx.get_start_time() ? gpx.get_start_time().toLocaleDateString('it-IT') : "N/D";
+                const name = gpx.get_name() || fileName.replace(/\.gpx/i, '');
+                const dist = (gpx.get_distance() / 1000).toFixed(1);
 
-                // Создаем элемент в боковой панели
                 const item = document.createElement('div');
                 item.className = 'track-item';
-                item.innerHTML = `<b>${name}</b><div class="track-info">📏 ${dist} km | 📅 ${date}</div>`;
+                item.innerHTML = `
+                    <div class="track-clickable" onclick="focusTrack('${url}')">
+                        <span class="track-name" title="${name}" style="color:${trackColor}">${name}</span>
+                        <span class="track-dist">📍 ${dist}km</span>
+                    </div>
+                    <a href="${url}" download class="btn-download">↓</a>
+                `;
                 
-                // Клик по элементу в списке - зум на трек
-                item.onclick = () => {
-                    map.fitBounds(gpx.getBounds(), { padding: [50, 50] });
-                };
-                
+                window[url] = gpx; 
                 document.getElementById('track-list').appendChild(item);
-
-                // Тултип на карте
-                const info = `<b>${name}</b><br>📏 ${dist} km<br>📅 ${date}`;
+                
                 gpx.getLayers().forEach(layer => {
-                    layer.bindTooltip(info, { sticky: true });
-                    layer.on('mouseover', () => layer.setStyle({ color: '#FF0000', weight: 6 }));
-                    layer.on('mouseout', () => layer.setStyle({ color: '#0000FF', weight: 4 }));
+                    layer.bindTooltip(`${name} (${dist} km)`);
+                    layer.on('mouseover', () => layer.setStyle({ weight: 8, opacity: 1 }));
+                    layer.on('mouseout', () => layer.setStyle({ weight: 4, opacity: 0.7 }));
                 });
                 
-                map.fitBounds(gpx.getBounds());
+                // Авто-подстройка карты под все треки
+                map.fitBounds(gpx.getBounds(), {padding: [50,50]});
             }).addTo(map);
+        }
+
+        function focusTrack(url) {
+            const gpx = window[url];
+            if (gpx) map.fitBounds(gpx.getBounds(), { padding: [40, 40] });
         }
 
         loadAllTracks();
