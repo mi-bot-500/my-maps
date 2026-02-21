@@ -75,3 +75,105 @@
         const googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
             maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google'
         });
+
+        // OpenStreetMap & Topo
+        const osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap'
+        });
+        const openTopo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenTopoMap'
+        });
+        const cycloOSM = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+            attribution: '© Cyclosm'
+        });
+
+        // Инициализация карты
+        const map = L.map('map', { 
+            center: [45.0, 9.0], 
+            zoom: 5,
+            layers: [googleTerrain] // Основной слой
+        });
+
+        // Группировка слоев для меню
+        const baseMaps = {
+            "Google Rilievo": googleTerrain,
+            "Google Satellite": googleSat,
+            "Google Ibrido": googleHybrid,
+            "Google Strade": googleStreets,
+            "OpenStreetMap": osm,
+            "Mappa Topografica": openTopo,
+            "Ciclabile (Cyclosm)": cycloOSM
+        };
+
+        // Добавление контроллера слоев
+        L.control.layers(baseMaps, null, { collapsed: true }).addTo(map);
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('hidden');
+            setTimeout(() => { map.invalidateSize(); }, 350);
+        }
+
+        function getRandomColor() {
+            const colors = ['#FF5733', '#28a745', '#007bff', '#F333FF', '#FF33A8', '#E67E22', '#1ABC9C'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        const user = 'mi-bot-500';
+        const repo = 'my-maps';
+        const folder = 'tracks';
+        const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${folder}`;
+
+        async function loadAllTracks() {
+            try {
+                const response = await fetch(apiUrl);
+                const files = await response.json();
+                const gpxFiles = files.filter(f => f.name.toLowerCase().endsWith('.gpx'));
+                
+                document.getElementById('track-list').innerHTML = '';
+                gpxFiles.forEach(file => renderTrack(file.download_url, file.name));
+            } catch (e) {
+                console.error("Errore:", e);
+            }
+        }
+
+        window.tracksData = {};
+
+        function renderTrack(url, fileName) {
+            const trackColor = getRandomColor();
+            
+            const gpx = new L.GPX(url, {
+                async: true,
+                marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+                polyline_options: { color: trackColor, weight: 4, opacity: 0.8 }
+            }).on('loaded', function(e) {
+                const gpxLayer = e.target;
+                const dist = (gpxLayer.get_distance() / 1000).toFixed(1);
+                const displayName = fileName.replace('.gpx', '');
+                const id = L.stamp(gpxLayer);
+
+                const item = document.createElement('div');
+                item.className = 'track-item';
+                item.innerHTML = `
+                    <div class="track-clickable" onclick="focusTrack('${id}')">
+                        <span class="track-name" style="color:${trackColor}">${displayName}</span>
+                        <span class="track-dist">${dist} km</span>
+                    </div>
+                    <a href="${url}" class="btn-download" download>↓</a>
+                `;
+                document.getElementById('track-list').appendChild(item);
+                window.tracksData[id] = gpxLayer;
+            }).addTo(map);
+        }
+
+        function focusTrack(id) {
+            const track = window.tracksData[id];
+            if (track) {
+                map.fitBounds(track.getBounds(), { padding: [50, 50] });
+            }
+        }
+
+        loadAllTracks();
+    </script>
+</body>
+</html>
