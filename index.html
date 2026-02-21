@@ -3,48 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Maps - Pro Layers</title>
+    <title>My Maps Pro - Ultimate Edition</title>
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.min.css" />
+    
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; }
-        #map { height: 100vh; width: 100%; z-index: 1; }
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; overflow: hidden; }
+        #map { height: 100vh; width: 100%; z-index: 1; background: #f0f0f0; }
+        
         #sidebar { 
-            position: absolute; top: 0; left: 0; width: 300px; height: 100%; 
+            position: absolute; top: 0; left: 0; width: 320px; height: 100%; 
             background: white; z-index: 1000; transition: transform 0.3s ease; 
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1); display: flex; flex-direction: column;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.2); display: flex; flex-direction: column;
         }
-        #sidebar.hidden { transform: translateX(-300px); }
+        #sidebar.hidden { transform: translateX(-320px); }
+        
         #toggle-btn { 
-            position: absolute; top: 20px; left: 310px; z-index: 1100; 
-            background: white; border: none; padding: 10px 15px; cursor: pointer; 
-            border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
-            transition: left 0.3s ease; font-size: 18px;
+            position: absolute; top: 20px; left: 330px; z-index: 1100; 
+            background: white; border: none; padding: 12px 18px; cursor: pointer; 
+            border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+            transition: left 0.3s ease; font-size: 20px;
         }
         #sidebar.hidden + #toggle-btn { left: 20px; }
-        .search-container { padding: 10px; border-bottom: 1px solid #eee; }
-        #search-input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        .leaflet-bottom.leaflet-right { margin-bottom: 25px; margin-right: 10px; }
+
+        .header { padding: 15px; background: #007bff; color: white; }
+        .stats { font-size: 11px; opacity: 0.9; margin-top: 5px; display: flex; gap: 10px; }
+        .search-area { padding: 10px; border-bottom: 1px solid #eee; background: #fafafa; }
+        #search-input { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        .bulk-actions { display: flex; gap: 5px; margin-top: 8px; }
+        .btn-small { flex: 1; padding: 4px; font-size: 11px; cursor: pointer; border: 1px solid #ddd; background: white; border-radius: 3px; }
+
         #track-list { overflow-y: auto; flex-grow: 1; }
         .track-item { padding: 12px; display: flex; align-items: center; border-bottom: 1px solid #eee; gap: 10px; }
         .track-clickable { cursor: pointer; flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; }
-        .track-name { font-weight: 600; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .track-name { font-weight: 600; font-size: 13px; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .track-dist { font-size: 11px; color: #666; background: #eee; padding: 2px 6px; border-radius: 10px; align-self: flex-start; margin-top: 4px; }
+        
         .controls { display: flex; gap: 8px; }
-        .btn-action { width: 32px; height: 32px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 16px; text-decoration: none; color: white; }
+        .btn-action { width: 34px; height: 34px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; color: white; text-decoration: none; }
         .btn-hide { background: #6c757d; }
         .btn-hide.hidden-track { background: #dc3545; }
         .btn-download { background: #28a745; }
-        .track-tooltip { font-size: 12px; font-weight: bold; padding: 4px 8px; }
+
+        .leaflet-bottom.leaflet-right { margin-bottom: 25px; margin-right: 10px; z-index: 800; }
+        .elevation-control.leaflet-control { background: rgba(255, 255, 255, 0.9) !important; border-radius: 8px; }
     </style>
 </head>
 <body>
 
     <div id="sidebar">
-        <div style="padding: 15px; background: #007bff; color: white;">
-            <h3 style="margin:0; font-size: 16px;">📍 Tracce (GPX)</h3>
+        <div class="header">
+            <h3 style="margin:0; font-size: 16px;">📍 Tracce & Altimetria</h3>
+            <div class="stats">
+                <span id="stat-count">Tracce: 0</span>
+                <span id="stat-dist">Totale: 0 km</span>
+            </div>
         </div>
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Cerca traccia..." oninput="filterTracks()">
+        <div class="search-area">
+            <input type="text" id="search-input" placeholder="Cerca percorso..." oninput="filterTracks()">
+            <div class="bulk-actions">
+                <button class="btn-small" onclick="bulkVisibility(true)">Mostra tutto</button>
+                <button class="btn-small" onclick="bulkVisibility(false)">Nascondi tutto</button>
+            </div>
         </div>
         <div id="track-list"></div>
     </div>
@@ -54,24 +75,23 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+    <script src="https://unpkg.com/d3@5.16.0/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.min.js"></script>
 
     <script>
-        // --- БАЗОВЫЕ СЛОИ (Основа) ---
+        // --- 1. ВСЕ СЛОИ (Базовые и Оверлеи) ---
         const baseLayers = {
-            "Google Rilievo": L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'] }),
-            "Google Satellite": L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'] }),
-            "Esri World Imagery": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: '© Esri' }),
-            "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
-            "Topografica (OTM)": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png'),
-            "Hike & Bike": L.tileLayer('https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png')
+            "Google Rilievo": L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
+            "Google Satellite": L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
+            "Google Ibrido": L.tileLayer('http://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', { maxZoom: 20, subdomains:['mt0','mt1','mt2','mt3'], attribution: '© Google' }),
+            "Esri Imagery": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: '© Esri' }),
+            "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OSM' }),
+            "Topografica (OTM)": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', { attribution: '© OTM' }),
+            "Ciclabile (CyclOSM)": L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: '© CyclOSM' })
         };
 
-        // --- ОВЕРЛЕИ (Накладываются сверху) ---
         const overlays = {
-            "Percorsi Segnati (Hiking)": L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
-                attribution: '© Waymarked Trails',
-                opacity: 0.7
-            })
+            "Percorsi Hiking (Waymarked)": L.tileLayer('https://tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', { opacity: 0.7, attribution: '© Waymarked Trails' })
         };
 
         const map = L.map('map', { 
@@ -79,9 +99,15 @@
             layers: [baseLayers["Google Rilievo"]], zoomControl: false 
         });
 
+        // --- 2. КОНТРОЛЛЕРЫ ---
+        const elevationControl = L.control.elevation({
+            position: "bottomright", theme: "skyblue-theme", width: 400, height: 150,
+            useHeightIndicator: true, collapsed: false, detached: false, summary: 'inline',
+        }).addTo(map);
+
         L.control.zoom({ position: 'bottomright' }).addTo(map);
-        // Добавляем выбор и баз, и оверлеев
         L.control.layers(baseLayers, overlays, { collapsed: true }).addTo(map);
+        L.control.scale({ imperial: false, position: 'bottomright' }).addTo(map);
 
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
@@ -92,6 +118,7 @@
         const user = 'mi-bot-500', repo = 'my-maps', folder = 'tracks';
         const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/${folder}`;
         window.tracksData = {};
+        let totalDistance = 0;
 
         async function loadAllTracks() {
             try {
@@ -100,16 +127,7 @@
                 const gpxFiles = files.filter(f => f.name.toLowerCase().endsWith('.gpx'));
                 document.getElementById('track-list').innerHTML = '';
                 gpxFiles.forEach(file => renderTrack(file.download_url, file.name));
-            } catch (e) { console.error(e); }
-        }
-
-        function filterTracks() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const items = document.getElementsByClassName('track-item');
-            Array.from(items).forEach(item => {
-                const name = item.querySelector('.track-name').innerText.toLowerCase();
-                item.style.display = name.includes(query) ? 'flex' : 'none';
-            });
+            } catch (e) { console.error("Errore GitHub API:", e); }
         }
 
         function renderTrack(url, fileName) {
@@ -119,24 +137,28 @@
             const gpx = new L.GPX(url, {
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-                polyline_options: { color: color, weight: 5, opacity: 0.85 }
+                polyline_options: { color: color, weight: 5, opacity: 0.8 }
             }).on('loaded', function(e) {
                 const layer = e.target;
                 const id = L.stamp(layer);
-                const dist = (layer.get_distance() / 1000).toFixed(1);
-                layer.bindTooltip(`<b>${name}</b><br>${dist} km`, { sticky: true, className: 'track-tooltip' });
+                const d = layer.get_distance() / 1000;
+                
+                totalDistance += d;
+                updateStats(Object.keys(window.tracksData).length + 1);
+
+                layer.bindTooltip(`<b>${name}</b><br>${d.toFixed(1)} km`, { sticky: true });
 
                 const item = document.createElement('div');
                 item.className = 'track-item';
                 item.id = `item-${id}`;
                 item.innerHTML = `
-                    <div class="track-clickable" onclick="focusTrack('${id}')">
+                    <div class="track-clickable" onclick="focusTrack('${id}', '${url}')">
                         <span class="track-name" style="color:${color}">${name}</span>
-                        <span class="track-dist">${dist} km</span>
+                        <span class="track-dist">${d.toFixed(1)} km</span>
                     </div>
                     <div class="controls">
-                        <button class="btn-action btn-hide" onclick="toggleVisibility('${id}')">👁</button>
-                        <a href="${url}" class="btn-action btn-download" download>↓</a>
+                        <button class="btn-action btn-hide" onclick="toggleVisibility('${id}')" title="Mostra/Nascondi">👁</button>
+                        <a href="${url}" class="btn-action btn-download" download title="Download">↓</a>
                     </div>
                 `;
                 document.getElementById('track-list').appendChild(item);
@@ -144,9 +166,18 @@
             }).addTo(map);
         }
 
-        function focusTrack(id) {
+        function updateStats(count) {
+            document.getElementById('stat-count').innerText = `Tracce: ${count}`;
+            document.getElementById('stat-dist').innerText = `Totale: ${totalDistance.toFixed(1)} km`;
+        }
+
+        function focusTrack(id, url) {
             const track = window.tracksData[id];
-            if (track && map.hasLayer(track)) map.fitBounds(track.getBounds(), { padding: [50, 50] });
+            if (track && map.hasLayer(track)) {
+                map.fitBounds(track.getBounds(), { padding: [50, 50] });
+                elevationControl.clear();
+                elevationControl.load(url);
+            }
         }
 
         function toggleVisibility(id) {
@@ -162,6 +193,31 @@
                 btn.innerText = '👁';
             }
         }
+
+        function bulkVisibility(show) {
+            Object.keys(window.tracksData).forEach(id => {
+                const track = window.tracksData[id];
+                const btn = document.querySelector(`#item-${id} .btn-hide`);
+                if (show && !map.hasLayer(track)) {
+                    map.addLayer(track);
+                    btn.classList.remove('hidden-track');
+                    btn.innerText = '👁';
+                } else if (!show && map.hasLayer(track)) {
+                    map.removeLayer(track);
+                    btn.classList.add('hidden-track');
+                    btn.innerText = '✕';
+                }
+            });
+        }
+
+        function filterTracks() {
+            const q = document.getElementById('search-input').value.toLowerCase();
+            document.querySelectorAll('.track-item').forEach(item => {
+                const name = item.querySelector('.track-name').innerText.toLowerCase();
+                item.style.display = name.includes(q) ? 'flex' : 'none';
+            });
+        }
+
         loadAllTracks();
     </script>
 </body>
