@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>My Maps Pro - Full Edition</title>
+    <title>My Maps Pro - Compact Edition</title>
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -18,15 +18,15 @@
         #map { height: 100vh; width: 100%; z-index: 1; background: #f0f0f0; }
         
         #sidebar { 
-            position: absolute; top: 0; left: 0; width: 320px; height: 100%; 
+            position: absolute; top: 0; left: 0; width: 340px; height: 100%; 
             background: white; z-index: 1000; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
             box-shadow: 2px 0 10px rgba(0,0,0,0.2); display: flex; flex-direction: column;
             touch-action: pan-y;
         }
-        #sidebar.hidden { transform: translateX(-320px); }
+        #sidebar.hidden { transform: translateX(-340px); }
         
         #toggle-btn { 
-            position: absolute; top: 20px; left: 330px; z-index: 1100; 
+            position: absolute; top: 20px; left: 350px; z-index: 1100; 
             background: white; border: none; padding: 12px 18px; cursor: pointer; 
             border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
             transition: left 0.3s ease; font-size: 20px;
@@ -38,26 +38,24 @@
         .search-area { padding: 10px; border-bottom: 1px solid #eee; background: #fafafa; }
         #search-input { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
         .bulk-actions { display: flex; gap: 5px; margin-top: 8px; }
-        .btn-small { flex: 1; padding: 4px; font-size: 11px; cursor: pointer; border: 1px solid #ddd; background: white; border-radius: 3px; }
+        .btn-small { flex: 1; padding: 6px; font-size: 11px; cursor: pointer; border: 1px solid #ddd; background: white; border-radius: 3px; }
 
         #track-list { overflow-y: auto; flex-grow: 1; }
-        .track-item { padding: 12px; display: flex; align-items: center; border-bottom: 1px solid #eee; gap: 10px; }
-        .track-clickable { cursor: pointer; flex-grow: 1; display: flex; flex-direction: column; overflow: hidden; }
-        .track-name { font-weight: 600; font-size: 13px; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .track-dist { font-size: 11px; color: #666; background: #eee; padding: 2px 6px; border-radius: 10px; align-self: flex-start; margin-top: 4px; }
+        .track-item { padding: 8px 12px; display: flex; align-items: center; border-bottom: 1px solid #eee; gap: 8px; justify-content: space-between; }
+        .track-clickable { cursor: pointer; flex-grow: 1; display: flex; align-items: center; gap: 8px; overflow: hidden; white-space: nowrap; }
+        .track-name { font-weight: 600; font-size: 13px; color: #333; overflow: hidden; text-overflow: ellipsis; }
+        .track-dist { font-size: 11px; color: #666; background: #f0f0f0; padding: 1px 5px; border-radius: 4px; flex-shrink: 0; }
         
-        .offline-badge { font-size: 9px; padding: 2px 5px; border-radius: 4px; background: #eee; color: #999; text-transform: uppercase; margin-left: 5px; }
-        .offline-ready { background: #d4edda; color: #155724; font-weight: bold; }
+        .offline-badge { font-size: 9px; color: #ccc; flex-shrink: 0; }
+        .offline-ready { color: #28a745; font-weight: bold; }
 
-        .controls { display: flex; gap: 8px; }
-        .btn-action { width: 34px; height: 34px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; color: white; text-decoration: none; }
-        .btn-hide { background: #6c757d; }
-        .btn-hide.hidden-track { background: #dc3545; }
-        .btn-download { background: #28a745; }
+        .controls { display: flex; gap: 4px; flex-shrink: 0; }
+        .btn-rect { width: 30px; height: 30px; border: 1px solid #ddd; background: #f8f9fa; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 4px; font-size: 14px; font-weight: bold; color: #444; }
+        .btn-hide.hidden-track { background: #fee; color: #dc3545; border-color: #fcc; }
+        .btn-download { background: #eefdf0; color: #28a745; border-color: #cfc; text-decoration: none; }
 
         .leaflet-control-share { background: white; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 4px; box-shadow: 0 1px 5px rgba(0,0,0,0.4); font-size: 18px; }
         .leaflet-bottom.leaflet-right { margin-bottom: 25px; margin-right: 10px; z-index: 800; }
-        .elevation-control.leaflet-control { background: rgba(255, 255, 255, 0.9) !important; border-radius: 8px; }
     </style>
 </head>
 <body>
@@ -71,10 +69,10 @@
             </div>
         </div>
         <div class="search-area">
-            <input type="text" id="search-input" placeholder="Cerca percorso..." oninput="filterTracks()">
+            <input type="text" id="search-input" placeholder="Cerca..." oninput="filterTracks()">
             <div class="bulk-actions">
-                <button class="btn-small" onclick="bulkVisibility(true)">Mostra tutto</button>
-                <button class="btn-small" onclick="bulkVisibility(false)">Nascondi tutto</button>
+                <button class="btn-small" onclick="bulkVisibility(true)">Mostra tutti</button>
+                <button class="btn-small" onclick="bulkVisibility(false)">Nascondi tutti</button>
             </div>
         </div>
         <div id="track-list"></div>
@@ -124,14 +122,13 @@
         });
         map.addControl(new ShareControl());
 
+        // Swipe Logic
         let touchStartX = 0;
         const sidebar = document.getElementById('sidebar');
-
         sidebar.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
         sidebar.addEventListener('touchend', e => {
             if (touchStartX - e.changedTouches[0].screenX > 60) { if (!sidebar.classList.contains('hidden')) toggleSidebar(); }
         }, {passive: true});
-
         document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
         document.addEventListener('touchend', e => {
             if (e.changedTouches[0].screenX - touchStartX > 80 && touchStartX < 50) { if (sidebar.classList.contains('hidden')) toggleSidebar(); }
@@ -146,8 +143,7 @@
         async function isCached(url) {
             if (!('caches' in window)) return false;
             const cache = await caches.open('my-tracks-v2');
-            const match = await cache.match(url);
-            return !!match;
+            return !!(await cache.match(url));
         }
 
         async function downloadFile(url, filename) {
@@ -160,7 +156,7 @@
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
-            } catch (e) { console.error("Download error:", e); }
+            } catch (e) { console.error(e); }
         }
 
         async function loadAllTracks() {
@@ -181,11 +177,12 @@
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
                 polyline_options: { color: color, weight: 5, opacity: 0.8 },
-                // ВОССТАНОВЛЕННЫЕ ТУЛТИПЫ
                 tooltip_options: { sticky: true }
             }).on('loaded', async function(e) {
                 const layer = e.target, id = L.stamp(layer), d = layer.get_distance() / 1000, cached = await isCached(url);
-                layer.bindTooltip(name); // Привязка текста тултипа
+                
+                // Тултип с дистанцией
+                layer.bindTooltip(`${name} (${d.toFixed(1)} km)`);
                 
                 totalDistance += d;
                 updateStats(Object.keys(window.tracksData).length + 1);
@@ -196,14 +193,12 @@
                 item.innerHTML = `
                     <div class="track-clickable" onclick="focusTrack('${id}', '${url}', this)">
                         <span class="track-name" style="color:${color}">${name}</span>
-                        <div style="display:flex; align-items:center; gap:5px;">
-                            <span class="track-dist">${d.toFixed(1)} km</span>
-                            <span class="offline-badge ${cached ? 'offline-ready' : ''}">${cached ? '✅ Ready' : 'Cloud'}</span>
-                        </div>
+                        <span class="track-dist">${d.toFixed(1)} km</span>
+                        <span class="offline-badge ${cached ? 'offline-ready' : ''}">${cached ? '●' : '○'}</span>
                     </div>
                     <div class="controls">
-                        <button class="btn-action btn-hide" onclick="toggleVisibility('${id}', '${url}')">👁</button>
-                        <button class="btn-action btn-download" onclick="downloadFile('${url}', '${fileName}')">↓</button>
+                        <button class="btn-rect btn-hide" onclick="toggleVisibility('${id}', '${url}')">✓</button>
+                        <button class="btn-rect btn-download" onclick="downloadFile('${url}', '${fileName}')">↓</button>
                     </div>`;
                 document.getElementById('track-list').appendChild(item);
                 window.tracksData[id] = layer;
@@ -222,7 +217,7 @@
                 elevationControl.clear(); elevationControl.load(url);
                 window.currentElevationTrack = url;
                 const badge = element.querySelector('.offline-badge');
-                if (badge) { badge.innerText = '✅ Ready'; badge.classList.add('offline-ready'); }
+                if (badge) { badge.innerText = '●'; badge.classList.add('offline-ready'); }
             }
         }
 
@@ -231,13 +226,13 @@
             if (map.hasLayer(track)) { 
                 map.removeLayer(track); btn.innerText = '✕'; btn.classList.add('hidden-track');
                 if (window.currentElevationTrack === url) { elevationControl.clear(); window.currentElevationTrack = null; }
-            } else { map.addLayer(track); btn.innerText = '👁'; btn.classList.remove('hidden-track'); }
+            } else { map.addLayer(track); btn.innerText = '✓'; btn.classList.remove('hidden-track'); }
         }
 
         function bulkVisibility(show) {
             Object.keys(window.tracksData).forEach(id => {
                 const track = window.tracksData[id], btn = document.querySelector(`#item-${id} .btn-hide`);
-                if (show && !map.hasLayer(track)) { map.addLayer(track); btn.innerText = '👁'; btn.classList.remove('hidden-track'); }
+                if (show && !map.hasLayer(track)) { map.addLayer(track); btn.innerText = '✓'; btn.classList.remove('hidden-track'); }
                 else if (!show && map.hasLayer(track)) { 
                     map.removeLayer(track); btn.innerText = '✕'; btn.classList.add('hidden-track'); 
                     elevationControl.clear(); window.currentElevationTrack = null;
