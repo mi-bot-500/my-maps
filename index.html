@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>My Maps Pro - Stability Fix</title>
+    <title>My Maps Pro - Collapsible Groups</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.min.css" />
@@ -16,7 +16,6 @@
             position: absolute; top: 0; left: 0; width: 320px; height: 100%; 
             background: white; z-index: 1000; transition: transform 0.3s ease; 
             display: flex; flex-direction: column; box-shadow: 2px 0 10px rgba(0,0,0,0.2);
-            touch-action: none; /* Для чистого считывания жестов */
         }
         #sidebar.hidden { transform: translateX(-320px); }
         #toggle-btn { 
@@ -25,7 +24,22 @@
             border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: left 0.3s ease; font-size: 20px;
         }
         #sidebar.hidden + #toggle-btn { left: 20px; }
+        
         .header { padding: 15px; background: #007bff; color: white; padding-top: 45px; }
+        
+        /* Стили групп */
+        .month-group { 
+            background: #f1f3f5; padding: 10px 15px; font-size: 11px; font-weight: bold; 
+            color: #666; text-transform: uppercase; border-bottom: 1px solid #ddd; 
+            cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 10;
+        }
+        .month-group::after { content: '▼'; font-size: 8px; transition: transform 0.2s; }
+        .month-group.collapsed::after { content: '▶'; }
+
+        /* Логика скрытия элементов */
+        .track-item.hidden-group { display: none; }
+
         #track-list { overflow-y: auto; flex-grow: 1; -webkit-overflow-scrolling: touch; }
         .track-item { padding: 12px; display: flex; align-items: center; border-bottom: 1px solid #eee; gap: 10px; background: #fff; }
         .track-clickable { cursor: pointer; flex-grow: 1; overflow: hidden; }
@@ -65,23 +79,57 @@
         window.tracksData = {};
         let totalDistance = 0;
 
+        function formatGroupName(fileName) {
+            const datePart = fileName.substring(0, 7);
+            if (!/^\d{4}-\d{2}$/.test(datePart)) return "Altro";
+            const date = new Date(datePart + "-01");
+            return date.toLocaleString('it-IT', { month: 'long', year: 'numeric' });
+        }
+
         async function loadAllTracks() {
             try {
-                // ОДИН запрос вместо десятков (убираем 403 ошибку)
                 const response = await fetch(`https://api.github.com/repos/${user}/${repo}/contents/${folder}`);
-                if (!response.ok) throw new Error('GitHub API Limit');
                 const files = await response.json();
-                const gpxFiles = files.filter(f => f.name.toLowerCase().endsWith('.gpx')).reverse();
+                const gpxFiles = files.filter(f => f.name.toLowerCase().endsWith('.gpx')).sort((a, b) => b.name.localeCompare(a.name));
 
                 const list = document.getElementById('track-list');
+                let currentMonthGroup = "";
+                let groupCounter = 0;
                 let first = null;
 
                 for (const file of gpxFiles) {
+                    const groupName = formatGroupName(file.name);
+                    
+                    if (groupName !== currentMonthGroup) {
+                        currentMonthGroup = groupName;
+                        groupCounter++;
+                        
+                        const h = document.createElement('div');
+                        h.className = 'month-group';
+                        // Схлопываем все группы, кроме первой
+                        if (groupCounter > 1) h.classList.add('collapsed');
+                        h.innerText = groupName;
+                        h.dataset.group = 'group-' + groupCounter;
+                        
+                        h.onclick = function() {
+                            this.classList.toggle('collapsed');
+                            const targetGroup = this.dataset.group;
+                            document.querySelectorAll(`.track-item[data-parent="${targetGroup}"]`).forEach(el => {
+                                el.classList.toggle('hidden-group');
+                            });
+                        };
+                        list.appendChild(h);
+                    }
+
                     const id = 'id-' + Math.random().toString(36).substr(2, 9);
                     const color = ['#FF5733', '#28a745', '#007bff', '#F333FF', '#E67E22'][Math.floor(Math.random()*5)];
 
                     const item = document.createElement('div');
                     item.className = 'track-item';
+                    item.dataset.parent = 'group-' + groupCounter;
+                    // Если группа схлопнута, скрываем и айтем
+                    if (groupCounter > 1) item.classList.add('hidden-group');
+                    
                     item.id = `item-${id}`;
                     item.innerHTML = `
                         <div class="track-clickable" onclick="focusTrack('${id}', '${file.download_url}', this)">
@@ -99,7 +147,6 @@
                         window.tracksData[id] = l;
                         totalDistance += l.get_distance() / 1000;
                         document.getElementById('stat-dist').innerText = `Totale: ${totalDistance.toFixed(1)} km`;
-                        
                         l.bindTooltip(file.name.replace('.gpx',''), { sticky: true });
                         
                         l.on('mousemove', ev => {
@@ -115,13 +162,11 @@
                             }
                         });
                         l.on('mouseout', () => map.closePopup());
-
                         if (!first) first = { id, url: file.download_url };
                     }).addTo(map);
                 }
-
                 setTimeout(() => { if (first) focusTrack(first.id, first.url); }, 1500);
-            } catch (e) { document.getElementById('stat-dist').innerText = "API Limit! Riprova tra 15 min."; }
+            } catch (e) { console.error(e); }
         }
 
         function focusTrack(id, url) {
@@ -142,14 +187,14 @@
 
         function toggleSidebar() { document.getElementById('sidebar').classList.toggle('hidden'); setTimeout(() => map.invalidateSize(), 350); }
 
-        // СВАЙПЫ (Исправлено)
+        // Свайпы
         let startX = 0;
         document.addEventListener('touchstart', e => startX = e.touches[0].clientX);
         document.addEventListener('touchend', e => {
             let diff = e.changedTouches[0].clientX - startX;
             let sb = document.getElementById('sidebar');
-            if (startX < 50 && diff > 80) sb.classList.remove('hidden'); // Вправо
-            if (!sb.classList.contains('hidden') && diff < -80) sb.classList.add('hidden'); // Влево
+            if (startX < 50 && diff > 80) sb.classList.remove('hidden');
+            if (!sb.classList.contains('hidden') && diff < -80) sb.classList.add('hidden');
             map.invalidateSize();
         });
 
