@@ -194,7 +194,7 @@
             const name = fileName.replace('.gpx', '');
             const monthId = fileName.substring(0, 7); 
 
-            const track = new L.GPX(url, {
+            new L.GPX(url, {
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
                 polyline_options: { color: color, weight: 5, opacity: 0.8 }
@@ -215,7 +215,6 @@
                         </div>
                         <div class="month-content"></div>`;
                     document.getElementById('track-list').appendChild(monthBox);
-                    // Сортировка групп месяцев в DOM
                     const groups = Array.from(document.getElementById('track-list').children);
                     groups.sort((a, b) => b.id.localeCompare(a.id));
                     groups.forEach(g => document.getElementById('track-list').appendChild(g));
@@ -237,34 +236,50 @@
                 monthBox.querySelector('.month-content').appendChild(item);
                 window.tracksData[id] = layer;
 
-                // Исправленный тултип точек
+                // --- НОВЫЙ БЛОК ДЛЯ КОПИРОВАНИЯ ТОЧЕК ---
                 layer.on('mousemove', function(ev) {
                     const coords = layer.get_coords();
                     if (!coords || coords.length === 0) return;
-
                     let minDist = Infinity, nearest = null;
-                    coords.forEach(p => {
+
+                    for (let p of coords) {
                         const dist = ev.latlng.distanceTo(L.latLng(p.lat, p.lng));
                         if (dist < minDist) { minDist = dist; nearest = p; }
-                    });
+                    }
 
-                    if (nearest && minDist < 50) { // Порог 50 метров
-                        const time = nearest.meta.time ? new Date(nearest.meta.time).toLocaleTimeString('it-IT', {hour: '2-digit', minute:'2-digit'}) : '';
-                        const alt = nearest.meta.ele ? `${Math.round(nearest.meta.ele)}m` : '';
-                        const content = [time, alt].filter(Boolean).join(' | ');
+                    if (nearest && minDist < 40) {
+                        const time = nearest.meta.time ? new Date(nearest.meta.time).toLocaleTimeString('it-IT', {hour: '2-digit', minute:'2-digit', second:'2-digit'}) : "";
+                        const ele = nearest.meta.ele ? `${Math.round(nearest.meta.ele)}m` : "";
+                        let content = `<div style="text-align:center; font-size:10px;"><b>${time}</b> | ${ele}<br>Click to copy search string</div>`;
                         
-                        if (content) {
-                            L.popup({ closeButton: false, className: 'point-data-tooltip', offset: [0, -10], autoPan: false })
-                                .setLatLng(L.latLng(nearest.lat, nearest.lng))
-                                .setContent(content)
-                                .openOn(map);
-                        }
+                        L.popup({ closeButton: false, className: 'point-data-tooltip', offset: [0, -10], autoPan: false })
+                            .setLatLng([nearest.lat, nearest.lng])
+                            .setContent(content)
+                            .openOn(map);
+                        
+                        layer._nearestPoint = nearest; 
                     } else {
                         map.closePopup();
                     }
                 });
-                
+
+                layer.on('click', function(ev) {
+                    if (layer._nearestPoint) {
+                        const p = layer._nearestPoint;
+                        const searchStr = `lat="${p.lat.toFixed(7)}" lon="${p.lng.toFixed(7)}"`;
+                        
+                        navigator.clipboard.writeText(searchStr).then(() => {
+                            const tempPopup = L.popup({ closeButton: false, offset: [0, -10] })
+                                .setLatLng([p.lat, p.lng])
+                                .setContent(`<b style="color:green;">Copied!</b><br><small>${searchStr}</small>`)
+                                .openOn(map);
+                            setTimeout(() => map.closePopup(tempPopup), 1200);
+                        });
+                    }
+                });
+
                 layer.on('mouseout', () => map.closePopup());
+                // --- КОНЕЦ БЛОКА ---
 
             }).addTo(map);
         }
