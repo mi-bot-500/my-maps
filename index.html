@@ -194,19 +194,17 @@
             const name = fileName.replace('.gpx', '');
             const monthId = fileName.substring(0, 7); 
 
-            new L.GPX(url, {
+            const track = new L.GPX(url, {
                 async: true,
                 marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
-                polyline_options: { color: color, weight: 5, opacity: 0.8 },
-                tooltip_options: { sticky: true }
+                polyline_options: { color: color, weight: 5, opacity: 0.8 }
             }).on('loaded', async function(e) {
                 const layer = e.target, id = L.stamp(layer), d = layer.get_distance() / 1000, cached = await isCached(url);
-                layer.bindTooltip(`${name} (${d.toFixed(1)} km)`);
+                layer.bindTooltip(`${name} (${d.toFixed(1)} km)`, { sticky: true });
                 
                 totalDistance += d;
                 updateStats(Object.keys(window.tracksData).length + 1);
 
-                // Группировка
                 let monthBox = document.getElementById(`month-${monthId}`);
                 if (!monthBox) {
                     monthBox = document.createElement('div');
@@ -217,6 +215,10 @@
                         </div>
                         <div class="month-content"></div>`;
                     document.getElementById('track-list').appendChild(monthBox);
+                    // Сортировка групп месяцев в DOM
+                    const groups = Array.from(document.getElementById('track-list').children);
+                    groups.sort((a, b) => b.id.localeCompare(a.id));
+                    groups.forEach(g => document.getElementById('track-list').appendChild(g));
                 }
 
                 const item = document.createElement('div');
@@ -235,20 +237,34 @@
                 monthBox.querySelector('.month-content').appendChild(item);
                 window.tracksData[id] = layer;
 
-                // Tooltip данных точки
+                // Исправленный тултип точек
                 layer.on('mousemove', function(ev) {
+                    const coords = layer.get_coords();
+                    if (!coords || coords.length === 0) return;
+
                     let minDist = Infinity, nearest = null;
-                    layer.get_coords().forEach(p => {
-                        let dist = ev.latlng.distanceTo(L.latLng(p.lat, p.lng));
+                    coords.forEach(p => {
+                        const dist = ev.latlng.distanceTo(L.latLng(p.lat, p.lng));
                         if (dist < minDist) { minDist = dist; nearest = p; }
                     });
-                    if (nearest && nearest.meta.time) {
-                        const time = new Date(nearest.meta.time).toLocaleTimeString('it-IT', {hour: '2-digit', minute:'2-digit'});
-                        const alt = nearest.meta.ele ? ` | ${Math.round(nearest.meta.ele)}m` : '';
-                        L.popup({ closeButton: false, className: 'point-data-tooltip', offset: [0, -10] })
-                            .setLatLng(ev.latlng).setContent(`${time}${alt}`).openOn(map);
+
+                    if (nearest && minDist < 50) { // Порог 50 метров
+                        const time = nearest.meta.time ? new Date(nearest.meta.time).toLocaleTimeString('it-IT', {hour: '2-digit', minute:'2-digit'}) : '';
+                        const alt = nearest.meta.ele ? `${Math.round(nearest.meta.ele)}m` : '';
+                        const content = [time, alt].filter(Boolean).join(' | ');
+                        
+                        if (content) {
+                            L.popup({ closeButton: false, className: 'point-data-tooltip', offset: [0, -10], autoPan: false })
+                                .setLatLng(L.latLng(nearest.lat, nearest.lng))
+                                .setContent(content)
+                                .openOn(map);
+                        }
+                    } else {
+                        map.closePopup();
                     }
                 });
+                
+                layer.on('mouseout', () => map.closePopup());
 
             }).addTo(map);
         }
