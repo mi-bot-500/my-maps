@@ -1900,5 +1900,3443 @@
         <radio op="I TIM" rat="LTE" q="30.00" rsrp="-110" sinr="15" rsrq="-10"/>
       </extensions>
     </trkpt>
+    <trkpt lat="45.6025837" lon="10.4536693">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T13:10:36.886+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772367026130"/>
+        <radio op="vodafone IT" rat="LTE" q="6.40" rsrp="-117" sinr="3" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="32.30" rsrp="-108" sinr="14" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025841" lon="10.4536702">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T13:11:38.606+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772367087899"/>
+        <radio op="vodafone IT" rat="LTE" q="6.40" rsrp="-117" sinr="3" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="30.40" rsrp="-109" sinr="14" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.602587" lon="10.4536581">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T13:12:40.285+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772367149632"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-107" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="30.40" rsrp="-109" sinr="14" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.602585" lon="10.4536746">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T13:17:20.777+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772367430009"/>
+        <radio op="vodafone IT" rat="LTE" q="2.80" rsrp="-121" sinr="2" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="24.00" rsrp="-113" sinr="15" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025841" lon="10.4536733">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T13:18:22.686+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772367491763"/>
+        <radio op="vodafone IT" rat="LTE" q="3.50" rsrp="-120" sinr="2" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="26.60" rsrp="-111" sinr="14" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025856" lon="10.4536596">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T14:50:00.716+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373000289"/>
+        <radio op="vodafone IT" rat="LTE" q="4.20" rsrp="-118" sinr="1" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="5.60" rsrp="-117" sinr="2" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.602591" lon="10.4536484">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T14:50:37.939+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373035010"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-107" sinr="5" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="35.00" rsrp="-100" sinr="9" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.602401" lon="10.4535879">
+      <ele>261.8000183105469</ele>
+      <time>2026-03-01T14:51:09.063+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="82" state="moving" tsMs="1772373069388"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-107" sinr="5" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="35.00" rsrp="-100" sinr="9" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6023614" lon="10.4536861">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T14:51:24.969+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="97" state="moving" tsMs="1772373072830"/>
+        <radio op="vodafone IT" rat="LTE" q="19.80" rsrp="-107" sinr="6" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="22.00" rsrp="-105" sinr="6" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6023001" lon="10.4535312">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T14:51:35.095+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="98" state="moving" tsMs="1772373082857"/>
+        <radio op="vodafone IT" rat="LTE" q="19.80" rsrp="-107" sinr="6" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="22.00" rsrp="-105" sinr="6" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6022454" lon="10.4533861">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T14:51:45.305+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="97" state="moving" tsMs="1772373104376"/>
+        <radio op="vodafone IT" rat="LTE" q="19.80" rsrp="-107" sinr="6" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="22.00" rsrp="-105" sinr="6" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.602223" lon="10.4532056">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T14:51:55.243+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="98" state="moving" tsMs="1772373114807"/>
+        <radio op="vodafone IT" rat="LTE" q="19.80" rsrp="-107" sinr="6" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="22.00" rsrp="-105" sinr="6" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6022338" lon="10.4531496">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T14:52:05.063+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="98" state="moving" tsMs="1772373114807"/>
+        <radio op="vodafone IT" rat="LTE" q="19.80" rsrp="-107" sinr="6" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="22.00" rsrp="-105" sinr="6" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6021982" lon="10.4531473">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T14:52:15.042+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="86" state="moving" tsMs="1772373118269"/>
+        <radio op="vodafone IT" rat="LTE" q="19.80" rsrp="-107" sinr="6" rsrq="-13"/>
+        <radio op="I TIM" rat="LTE" q="22.00" rsrp="-105" sinr="6" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6021894" lon="10.4531365">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T14:52:25.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373135426"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-107" sinr="5" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="26.00" rsrp="-105" sinr="8" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6022723" lon="10.4534168">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T14:52:35.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373135426"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-107" sinr="5" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="26.00" rsrp="-105" sinr="8" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6021735" lon="10.4539156">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T14:52:46.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373150991"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-107" sinr="5" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="26.00" rsrp="-105" sinr="8" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6017818" lon="10.4541126">
+      <ele>261.1000061035156</ele>
+      <time>2026-03-01T14:52:56.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373150991"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-107" sinr="5" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="26.00" rsrp="-105" sinr="8" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6017696" lon="10.4541244">
+      <ele>261.1000061035156</ele>
+      <time>2026-03-01T14:53:06.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373167993"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-107" sinr="5" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="26.00" rsrp="-105" sinr="8" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6020428" lon="10.4546842">
+      <ele>261.1000061035156</ele>
+      <time>2026-03-01T14:53:16.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373167993"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-107" sinr="5" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="26.00" rsrp="-105" sinr="8" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6024823" lon="10.4556248">
+      <ele>261.1000061035156</ele>
+      <time>2026-03-01T14:53:26.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373204859"/>
+        <radio op="vodafone IT" rat="LTE" q="92.50" rsrp="-88" sinr="27" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6028001" lon="10.4569836">
+      <ele>262.9677308893972</ele>
+      <time>2026-03-01T14:53:36.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373215653"/>
+        <radio op="vodafone IT" rat="LTE" q="92.50" rsrp="-88" sinr="27" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6031721" lon="10.4580092">
+      <ele>263.7755679751691</ele>
+      <time>2026-03-01T14:53:46.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373226452"/>
+        <radio op="vodafone IT" rat="LTE" q="92.50" rsrp="-88" sinr="27" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6036129" lon="10.4594147">
+      <ele>265.5215946211166</ele>
+      <time>2026-03-01T14:53:57.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373237253"/>
+        <radio op="vodafone IT" rat="LTE" q="92.50" rsrp="-88" sinr="27" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6040375" lon="10.4608184">
+      <ele>266.76385771085353</ele>
+      <time>2026-03-01T14:54:07.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373242649"/>
+        <radio op="vodafone IT" rat="LTE" q="92.50" rsrp="-88" sinr="27" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6045563" lon="10.4624755">
+      <ele>267.58674764975535</ele>
+      <time>2026-03-01T14:54:17.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373253411"/>
+        <radio op="vodafone IT" rat="LTE" q="92.50" rsrp="-88" sinr="27" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6050485" lon="10.4641616">
+      <ele>268.50839388757686</ele>
+      <time>2026-03-01T14:54:27.024+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="88" state="moving" tsMs="1772373264213"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="26" rsrq="-4"/>
+        <radio op="I TIM" rat="LTE" q="70.00" rsrp="-97" sinr="24" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6050195" lon="10.4650719">
+      <ele>267.490179956658</ele>
+      <time>2026-03-01T14:54:37.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373274961"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="26" rsrq="-4"/>
+        <radio op="I TIM" rat="LTE" q="70.00" rsrp="-97" sinr="24" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6055777" lon="10.4658906">
+      <ele>268.04021044857046</ele>
+      <time>2026-03-01T14:54:47.024+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772373285774"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="26" rsrq="-4"/>
+        <radio op="I TIM" rat="LTE" q="70.00" rsrp="-97" sinr="24" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6060857" lon="10.4675188">
+      <ele>269.30625398939185</ele>
+      <time>2026-03-01T14:54:57.024+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="94" state="moving" tsMs="1772373296541"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="26" rsrq="-4"/>
+        <radio op="I TIM" rat="LTE" q="70.00" rsrp="-97" sinr="24" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6065604" lon="10.4691555">
+      <ele>269.965594247</ele>
+      <time>2026-03-01T14:55:07.023+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="87" state="moving" tsMs="1772373307390"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="26" rsrq="-4"/>
+        <radio op="I TIM" rat="LTE" q="70.00" rsrp="-97" sinr="24" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6071324" lon="10.4710893">
+      <ele>271.3705355662079</ele>
+      <time>2026-03-01T14:55:18.024+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373318144"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="26" rsrq="-4"/>
+        <radio op="I TIM" rat="LTE" q="70.00" rsrp="-97" sinr="24" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6076161" lon="10.4728732">
+      <ele>271.9502194963649</ele>
+      <time>2026-03-01T14:55:28.025+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373323538"/>
+        <radio op="vodafone IT" rat="LTE" q="33.60" rsrp="-109" sinr="16" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="9.90" rsrp="-114" sinr="4" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6080822" lon="10.4747389">
+      <ele>272.3514004560279</ele>
+      <time>2026-03-01T14:55:38.025+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="83" state="moving" tsMs="1772373334263"/>
+        <radio op="vodafone IT" rat="LTE" q="33.60" rsrp="-109" sinr="16" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="9.90" rsrp="-114" sinr="4" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6087166" lon="10.4763534">
+      <ele>272.86603170556185</ele>
+      <time>2026-03-01T14:55:48.025+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373345072"/>
+        <radio op="vodafone IT" rat="LTE" q="33.60" rsrp="-109" sinr="16" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="9.90" rsrp="-114" sinr="4" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6096607" lon="10.4776461">
+      <ele>273.5991718527216</ele>
+      <time>2026-03-01T14:55:58.025+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772373355863"/>
+        <radio op="vodafone IT" rat="LTE" q="33.60" rsrp="-109" sinr="16" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="9.90" rsrp="-114" sinr="4" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6106055" lon="10.4789512">
+      <ele>274.1117768745356</ele>
+      <time>2026-03-01T14:56:08.025+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772373366605"/>
+        <radio op="vodafone IT" rat="LTE" q="33.60" rsrp="-109" sinr="16" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="9.90" rsrp="-114" sinr="4" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6107943" lon="10.4792536">
+      <ele>274.225226377553</ele>
+      <time>2026-03-01T14:56:10.025+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772373375986"/>
+        <radio op="vodafone IT" rat="LTE" q="33.60" rsrp="-109" sinr="16" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="9.90" rsrp="-114" sinr="4" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6116061" lon="10.4812967">
+      <ele>268.6000061035156</ele>
+      <time>2026-03-01T14:56:32.025+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772373392396"/>
+        <radio op="vodafone IT" rat="LTE" q="8.40" rsrp="-113" sinr="2" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" rsrp="-108" rsrq="-15"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6115844" lon="10.4813635">
+      <ele>270.0</ele>
+      <time>2026-03-01T14:56:35.625+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="92" state="moving" tsMs="1772373401418"/>
+        <radio op="vodafone IT" rat="LTE" q="8.40" rsrp="-113" sinr="2" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" rsrp="-108" rsrq="-15"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6108703" lon="10.482211">
+      <ele>270.0</ele>
+      <time>2026-03-01T14:56:48.025+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373412237"/>
+        <radio op="vodafone IT" rat="LTE" q="8.40" rsrp="-113" sinr="2" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" rsrp="-108" rsrq="-15"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6109322" lon="10.4826001">
+      <ele>269.6000061035156</ele>
+      <time>2026-03-01T14:56:59.025+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373421898"/>
+        <radio op="vodafone IT" rat="LTE" q="8.40" rsrp="-113" sinr="2" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" rsrp="-108" rsrq="-15"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6110606" lon="10.4819492">
+      <ele>272.8114163163546</ele>
+      <time>2026-03-01T14:57:36.722+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="97" state="moving" tsMs="1772373455336"/>
+        <radio op="vodafone IT" rat="LTE" q="11.20" rsrp="-111" sinr="3" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="11.20" rsrp="-109" sinr="2" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6113142" lon="10.4815649">
+      <ele>270.20001220703125</ele>
+      <time>2026-03-01T14:58:15.917+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772373491012"/>
+        <radio op="vodafone IT" rat="LTE" q="11.20" rsrp="-111" sinr="3" rsrq="-12"/>
+        <radio op="I TIM" rat="LTE" q="11.20" rsrp="-109" sinr="2" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6118798" lon="10.4811141">
+      <ele>273.6527418494899</ele>
+      <time>2026-03-01T14:59:04.574+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772373541005"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-115" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="3.00" rsrp="-119" sinr="0" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6118904" lon="10.4810964">
+      <ele>273.70316097480327</ele>
+      <time>2026-03-01T14:59:59.311+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373599363"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-115" rsrq="-11"/>
+        <radio op="I TIM" rat="LTE" q="3.00" rsrp="-119" sinr="0" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6118584" lon="10.481165">
+      <ele>273.6254316133628</ele>
+      <time>2026-03-01T15:00:36.647+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373634997"/>
+        <radio op="vodafone IT" rat="LTE" q="2.40" rsrp="-121" sinr="1" rsrq="-14"/>
+        <radio op="I TIM" rat="LTE" q="1.80" rsrp="-122" sinr="1" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6118564" lon="10.481167">
+      <ele>273.6254316133628</ele>
+      <time>2026-03-01T15:00:39.923+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373634997"/>
+        <radio op="vodafone IT" rat="LTE" q="2.40" rsrp="-121" sinr="1" rsrq="-14"/>
+        <radio op="I TIM" rat="LTE" q="1.80" rsrp="-122" sinr="1" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6118545" lon="10.481169">
+      <ele>273.33762901310365</ele>
+      <time>2026-03-01T15:01:17.767+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="97" state="still" tsMs="1772373672741"/>
+        <radio op="I TIM" rat="LTE" q="9.00" rsrp="-115" sinr="4" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-119" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6118544" lon="10.4811652">
+      <ele>273.67374978244794</ele>
+      <time>2026-03-01T15:01:48.799+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="96" state="still" tsMs="1772373703745"/>
+        <radio op="I TIM" rat="LTE" q="9.00" rsrp="-115" sinr="4" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-119" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6118601" lon="10.48116">
+      <ele>273.9321515554653</ele>
+      <time>2026-03-01T15:02:20.456+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772373739967"/>
+        <radio op="I TIM" rat="LTE" q="6.40" rsrp="-117" sinr="3" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="4.20" rsrp="-118" sinr="1" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6115301" lon="10.481362">
+      <ele>270.0</ele>
+      <time>2026-03-01T15:29:03.897+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772375367953"/>
+        <radio op="I TIM" rat="LTE" q="22.50" rsrp="-100" sinr="4" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-119" rsrq="-16"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6112112" lon="10.4817712">
+      <ele>270.20001220703125</ele>
+      <time>2026-03-01T15:29:52.525+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772375395694"/>
+        <radio op="I TIM" rat="LTE" q="22.50" rsrp="-100" sinr="4" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-119" rsrq="-16"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6109772" lon="10.4823565">
+      <ele>269.8000183105469</ele>
+      <time>2026-03-01T15:30:39.394+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772375435346"/>
+        <radio op="I TIM" rat="LTE" rsrp="-109" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-104" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6152835" lon="10.4868207">
+      <ele>277.5</ele>
+      <time>2026-03-01T15:32:26.027+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772375542717"/>
+        <radio op="I TIM" rat="LTE" rsrp="-121" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="16.00" rsrp="-109" sinr="5" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6164306" lon="10.4866566">
+      <ele>277.5</ele>
+      <time>2026-03-01T15:32:36.027+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772375553566"/>
+        <radio op="I TIM" rat="LTE" rsrp="-121" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="16.00" rsrp="-109" sinr="5" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6174872" lon="10.4868322">
+      <ele>277.5</ele>
+      <time>2026-03-01T15:32:46.027+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772375564352"/>
+        <radio op="I TIM" rat="LTE" rsrp="-112" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" q="22.50" rsrp="-110" sinr="10" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6185494" lon="10.4871883">
+      <ele>277.5</ele>
+      <time>2026-03-01T15:32:56.027+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="94" state="moving" tsMs="1772375575158"/>
+        <radio op="I TIM" rat="LTE" rsrp="-112" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" q="22.50" rsrp="-110" sinr="10" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6193885" lon="10.4877041">
+      <ele>277.5</ele>
+      <time>2026-03-01T15:33:06.027+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772375585933"/>
+        <radio op="I TIM" rat="LTE" rsrp="-112" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" q="22.50" rsrp="-110" sinr="10" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6202604" lon="10.4886442">
+      <ele>283.0</ele>
+      <time>2026-03-01T15:33:16.027+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="91" state="moving" tsMs="1772375596785"/>
+        <radio op="I TIM" rat="LTE" rsrp="-112" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" q="22.50" rsrp="-110" sinr="10" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6206862" lon="10.489967">
+      <ele>281.0</ele>
+      <time>2026-03-01T15:33:26.027+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="94" state="moving" tsMs="1772375602166"/>
+        <radio op="I TIM" rat="LTE" rsrp="-112" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" q="22.50" rsrp="-110" sinr="10" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6211268" lon="10.4913185">
+      <ele>282.0</ele>
+      <time>2026-03-01T15:33:36.027+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772375612962"/>
+        <radio op="I TIM" rat="LTE" rsrp="-112" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" q="22.50" rsrp="-110" sinr="10" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.62226" lon="10.4955366">
+      <ele>292.4000244140625</ele>
+      <time>2026-03-01T15:34:07.853+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="93" state="moving" tsMs="1772375646494"/>
+        <radio op="I TIM" rat="LTE" q="12.00" rsrp="-105" sinr="1" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-117" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6220483" lon="10.4959031">
+      <ele>292.4000244140625</ele>
+      <time>2026-03-01T15:34:16.027+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="93" state="moving" tsMs="1772375646494"/>
+        <radio op="I TIM" rat="LTE" q="12.00" rsrp="-105" sinr="1" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-117" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6204888" lon="10.4936751">
+      <ele>261.6776062612168</ele>
+      <time>2026-03-01T15:34:53.026+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="93" state="moving" tsMs="1772375700707"/>
+        <radio op="I TIM" rat="LTE" q="12.00" rsrp="-117" sinr="10" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-113" sinr="10" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6181824" lon="10.4930521">
+      <ele>225.93911925819182</ele>
+      <time>2026-03-01T15:35:39.027+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="83" state="moving" tsMs="1772375743699"/>
+        <radio op="I TIM" rat="LTE" q="12.00" rsrp="-117" sinr="10" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-113" sinr="10" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176936" lon="10.4940248">
+      <ele>221.57742475728116</ele>
+      <time>2026-03-01T15:36:15.473+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772375770669"/>
+        <radio op="I TIM" rat="LTE" q="67.20" rsrp="-93" sinr="16" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-84" sinr="28" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176753" lon="10.4942078">
+      <ele>221.98820823767642</ele>
+      <time>2026-03-01T15:36:46.705+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772375806493"/>
+        <radio op="I TIM" rat="LTE" q="67.20" rsrp="-93" sinr="16" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-84" sinr="28" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176396" lon="10.4943461">
+      <ele>221.5994387992859</ele>
+      <time>2026-03-01T15:37:17.977+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="97" state="moving" tsMs="1772375834998"/>
+        <radio op="I TIM" rat="LTE" q="92.50" rsrp="-88" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="61.60" rsrp="-97" sinr="17" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177229" lon="10.4940239">
+      <ele>221.32367679163156</ele>
+      <time>2026-03-01T15:37:49.171+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="87" state="moving" tsMs="1772375865994"/>
+        <radio op="I TIM" rat="LTE" q="92.50" rsrp="-88" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="61.60" rsrp="-97" sinr="17" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176661" lon="10.4940618">
+      <ele>220.98830813718482</ele>
+      <time>2026-03-01T15:38:20.482+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772375897190"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="23" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="69.60" rsrp="-96" sinr="19" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176906" lon="10.4941076">
+      <ele>221.15125125007398</ele>
+      <time>2026-03-01T15:38:51.745+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772375928605"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="23" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="69.60" rsrp="-96" sinr="19" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176718" lon="10.4940591">
+      <ele>221.01884109823862</ele>
+      <time>2026-03-01T15:39:22.922+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772375959082"/>
+        <radio op="I TIM" rat="LTE" q="96.00" rsrp="-83" sinr="19" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="65.00" rsrp="-99" sinr="20" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176995" lon="10.4940674">
+      <ele>221.45963890219332</ele>
+      <time>2026-03-01T15:39:54.129+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772375989769"/>
+        <radio op="I TIM" rat="LTE" q="96.00" rsrp="-83" sinr="19" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="65.00" rsrp="-99" sinr="20" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176875" lon="10.4940493">
+      <ele>221.3886083451588</ele>
+      <time>2026-03-01T15:40:25.406+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="96" state="still" tsMs="1772376021933"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="23" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="95.00" rsrp="-87" sinr="21" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6175966" lon="10.4942629">
+      <ele>221.47008462182768</ele>
+      <time>2026-03-01T15:41:03.027+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="93" state="moving" tsMs="1772376073605"/>
+        <radio op="I TIM" rat="LTE" q="68.20" rsrp="-94" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="70.00" rsrp="-97" sinr="20" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176557" lon="10.4940637">
+      <ele>221.66838068284733</ele>
+      <time>2026-03-01T15:41:37.721+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="91" state="moving" tsMs="1772376094966"/>
+        <radio op="I TIM" rat="LTE" q="68.20" rsrp="-94" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="70.00" rsrp="-97" sinr="20" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176545" lon="10.4941057">
+      <ele>221.495744167738</ele>
+      <time>2026-03-01T15:42:08.82+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="44" state="still" tsMs="1772376129000"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="21" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-85" sinr="26" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176286" lon="10.4945333">
+      <ele>221.319667483189</ele>
+      <time>2026-03-01T15:42:39.937+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772376160082"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="21" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-85" sinr="26" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176653" lon="10.4941243">
+      <ele>221.54303221471903</ele>
+      <time>2026-03-01T15:43:11.052+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772376188081"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-83" sinr="29" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617638" lon="10.494286">
+      <ele>221.51962281321408</ele>
+      <time>2026-03-01T15:43:42.18+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772376213469"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-83" sinr="29" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176403" lon="10.4943692">
+      <ele>221.36984243702568</ele>
+      <time>2026-03-01T15:44:13.348+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772376252468"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="20" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-83" sinr="23" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176389" lon="10.4942857">
+      <ele>221.91932569537494</ele>
+      <time>2026-03-01T15:44:44.445+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772376281536"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="20" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-83" sinr="23" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176432" lon="10.494225">
+      <ele>223.1392086930976</ele>
+      <time>2026-03-01T15:45:15.655+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772376312186"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-83" sinr="28" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176416" lon="10.4943445">
+      <ele>223.11831722591637</ele>
+      <time>2026-03-01T15:45:46.794+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="97" state="still" tsMs="1772376343432"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-83" sinr="28" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176459" lon="10.4942795">
+      <ele>222.1575824696896</ele>
+      <time>2026-03-01T15:46:17.883+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772376374571"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-83" sinr="23" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176949" lon="10.4941624">
+      <ele>223.12458466074287</ele>
+      <time>2026-03-01T15:46:48.958+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772376405557"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-83" sinr="23" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176601" lon="10.494083">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:07:38.129+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772377647879"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="80.00" rsrp="-93" sinr="25" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176648" lon="10.4940824">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:08:40.034+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772377709747"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="20" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="21.70" rsrp="-94" sinr="2" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176646" lon="10.4940857">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:10:22.105+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772377822500"/>
+        <radio op="I TIM" rat="LTE" q="84.00" rsrp="-90" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-101" sinr="20" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176651" lon="10.4941134">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:10:50.777+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="86" state="moving" tsMs="1772377850174"/>
+        <radio op="I TIM" rat="LTE" q="84.00" rsrp="-90" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-101" sinr="20" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176673" lon="10.49407">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:11:24.033+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="84" state="moving" tsMs="1772377878675"/>
+        <radio op="I TIM" rat="LTE" q="84.00" rsrp="-90" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-101" sinr="20" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176454" lon="10.494244">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:11:55.073+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772377911270"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="23" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="62.50" rsrp="-100" sinr="21" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617723" lon="10.4940523">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:12:26.314+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772377942230"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="23" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="62.50" rsrp="-100" sinr="21" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176688" lon="10.4940482">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:12:57.744+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772377972654"/>
+        <radio op="I TIM" rat="LTE" q="81.40" rsrp="-88" sinr="17" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="72.50" rsrp="-96" sinr="20" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177004" lon="10.4940617">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:13:29.162+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378005122"/>
+        <radio op="I TIM" rat="LTE" q="81.40" rsrp="-88" sinr="17" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="72.50" rsrp="-96" sinr="20" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176855" lon="10.4940531">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:14:00.512+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378036344"/>
+        <radio op="I TIM" rat="LTE" q="91.20" rsrp="-87" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="77.50" rsrp="-94" sinr="26" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177086" lon="10.4940511">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:14:31.961+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="96" state="still" tsMs="1772378067720"/>
+        <radio op="I TIM" rat="LTE" q="91.20" rsrp="-87" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="77.50" rsrp="-94" sinr="26" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176549" lon="10.4940823">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:15:03.414+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="43" state="still" tsMs="1772378099305"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="67.20" rsrp="-97" sinr="19" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176553" lon="10.4943711">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:15:34.593+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378130656"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="67.20" rsrp="-97" sinr="19" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176808" lon="10.4943584">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:16:05.665+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="81" state="moving" tsMs="1772378161845"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="20" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="42.00" rsrp="-97" sinr="10" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176559" lon="10.4940898">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:16:36.993+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378192936"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="20" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="42.00" rsrp="-97" sinr="10" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176359" lon="10.4943985">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:17:08.479+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="44" state="still" tsMs="1772378224362"/>
+        <radio op="I TIM" rat="LTE" q="51.30" rsrp="-98" sinr="14" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="63.00" rsrp="-95" sinr="16" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176796" lon="10.4940601">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:17:40.039+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378254788"/>
+        <radio op="I TIM" rat="LTE" q="51.30" rsrp="-98" sinr="14" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="63.00" rsrp="-95" sinr="16" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176459" lon="10.4940714">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:18:11.195+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378287385"/>
+        <radio op="I TIM" rat="LTE" q="50.40" rsrp="-97" sinr="13" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="82.50" rsrp="-92" sinr="25" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176994" lon="10.494085">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:18:42.549+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378318420"/>
+        <radio op="I TIM" rat="LTE" q="50.40" rsrp="-97" sinr="13" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="82.50" rsrp="-92" sinr="25" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176517" lon="10.4940649">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:19:13.751+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378349767"/>
+        <radio op="I TIM" rat="LTE" q="86.40" rsrp="-89" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="42.00" rsrp="-95" sinr="9" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176645" lon="10.4940636">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:19:45.127+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378381065"/>
+        <radio op="I TIM" rat="LTE" q="86.40" rsrp="-89" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="42.00" rsrp="-95" sinr="9" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176856" lon="10.4942797">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:20:06.015+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378401671"/>
+        <radio op="I TIM" rat="LTE" q="72.60" rsrp="-92" sinr="17" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="44.80" rsrp="-97" sinr="11" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176106" lon="10.4942937">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:20:16.016+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378401671"/>
+        <radio op="I TIM" rat="LTE" q="72.60" rsrp="-92" sinr="17" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="44.80" rsrp="-97" sinr="11" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176598" lon="10.4940869">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:20:46.809+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378443594"/>
+        <radio op="I TIM" rat="LTE" q="72.60" rsrp="-92" sinr="17" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="44.80" rsrp="-97" sinr="11" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176623" lon="10.4940759">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:21:17.958+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="90" state="moving" tsMs="1772378477516"/>
+        <radio op="I TIM" rat="LTE" q="88.00" rsrp="-84" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="69.60" rsrp="-96" sinr="19" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176502" lon="10.4940933">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:21:49.18+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="90" state="moving" tsMs="1772378505547"/>
+        <radio op="I TIM" rat="LTE" q="88.00" rsrp="-84" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="69.60" rsrp="-96" sinr="19" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176516" lon="10.4940619">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:22:20.487+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378536465"/>
+        <radio op="I TIM" rat="LTE" q="85.80" rsrp="-86" sinr="17" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="80.00" rsrp="-93" sinr="20" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177034" lon="10.4940399">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:22:51.745+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="56" state="still" tsMs="1772378567684"/>
+        <radio op="I TIM" rat="LTE" q="85.80" rsrp="-86" sinr="17" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="80.00" rsrp="-93" sinr="20" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176587" lon="10.4940857">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:23:22.904+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="52" state="still" tsMs="1772378598993"/>
+        <radio op="I TIM" rat="LTE" q="92.00" rsrp="-83" sinr="18" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="67.50" rsrp="-98" sinr="23" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177157" lon="10.4940485">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:23:54.097+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378630126"/>
+        <radio op="I TIM" rat="LTE" q="92.00" rsrp="-83" sinr="18" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="67.50" rsrp="-98" sinr="23" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176651" lon="10.4940665">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:24:25.562+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378661601"/>
+        <radio op="I TIM" rat="LTE" q="69.00" rsrp="-95" sinr="18" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="65.00" rsrp="-99" sinr="21" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.61766" lon="10.4940873">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:24:56.99+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378692859"/>
+        <radio op="I TIM" rat="LTE" q="69.00" rsrp="-95" sinr="18" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="65.00" rsrp="-99" sinr="21" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176648" lon="10.494106">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:25:28.392+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="90" state="moving" tsMs="1772378724336"/>
+        <radio op="I TIM" rat="LTE" q="69.30" rsrp="-92" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="20" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176764" lon="10.4940604">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:25:59.64+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="57" state="still" tsMs="1772378755659"/>
+        <radio op="I TIM" rat="LTE" q="69.30" rsrp="-92" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="20" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176821" lon="10.4940631">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:26:30.974+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378786898"/>
+        <radio op="I TIM" rat="LTE" q="70.00" rsrp="-90" sinr="15" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="90.00" rsrp="-89" sinr="20" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177485" lon="10.4939245">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:27:02.107+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378817240"/>
+        <radio op="I TIM" rat="LTE" q="70.00" rsrp="-90" sinr="15" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="90.00" rsrp="-89" sinr="20" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176494" lon="10.4940916">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:27:33.322+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="81" state="moving" tsMs="1772378849356"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="54.00" rsrp="-95" sinr="13" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177185" lon="10.4940367">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:28:04.406+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="50" state="still" tsMs="1772378880521"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="54.00" rsrp="-95" sinr="13" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6178854" lon="10.4940288">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:28:35.645+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772378911541"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="22" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="85.00" rsrp="-91" sinr="22" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177221" lon="10.4940666">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:29:06.926+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="38" state="still" tsMs="1772378942874"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="22" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="85.00" rsrp="-91" sinr="22" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177103" lon="10.494089">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:29:38.218+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="86" state="still" tsMs="1772378974166"/>
+        <radio op="I TIM" rat="LTE" q="92.50" rsrp="-88" sinr="22" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="64.80" rsrp="-98" sinr="19" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176559" lon="10.4940894">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:30:09.504+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379005608"/>
+        <radio op="I TIM" rat="LTE" q="92.50" rsrp="-88" sinr="22" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="64.80" rsrp="-98" sinr="19" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176592" lon="10.4940915">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:30:40.728+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379036728"/>
+        <radio op="I TIM" rat="LTE" q="71.40" rsrp="-91" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="92.50" rsrp="-88" sinr="21" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176822" lon="10.4943689">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:31:11.928+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772379067937"/>
+        <radio op="I TIM" rat="LTE" q="71.40" rsrp="-91" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="92.50" rsrp="-88" sinr="21" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176449" lon="10.4941808">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:31:43.17+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772379099180"/>
+        <radio op="I TIM" rat="LTE" q="83.60" rsrp="-87" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.90" rsrp="-96" sinr="16" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177395" lon="10.4941721">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:32:10.771+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="35" state="still" tsMs="1772379130448"/>
+        <radio op="I TIM" rat="LTE" q="83.60" rsrp="-87" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.90" rsrp="-96" sinr="16" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176562" lon="10.4940872">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:32:44.811+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="37" state="still" tsMs="1772379160959"/>
+        <radio op="I TIM" rat="LTE" q="85.80" rsrp="-86" sinr="17" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="21" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617654" lon="10.4940854">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:33:15.988+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379192084"/>
+        <radio op="I TIM" rat="LTE" q="85.80" rsrp="-86" sinr="17" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="21" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617613" lon="10.4946393">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:33:47.2+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="65" state="still" tsMs="1772379223218"/>
+        <radio op="I TIM" rat="LTE" q="92.50" rsrp="-88" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="46.50" rsrp="-94" sinr="10" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176383" lon="10.4941003">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:34:18.347+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379253434"/>
+        <radio op="I TIM" rat="LTE" q="92.50" rsrp="-88" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="46.50" rsrp="-94" sinr="10" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176458" lon="10.4943791">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:34:49.515+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379285572"/>
+        <radio op="I TIM" rat="LTE" q="82.50" rsrp="-92" sinr="24" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="65.10" rsrp="-94" sinr="16" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177056" lon="10.4940609">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:35:20.732+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379316808"/>
+        <radio op="I TIM" rat="LTE" q="82.50" rsrp="-92" sinr="24" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="65.10" rsrp="-94" sinr="16" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617654" lon="10.4941046">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:35:51.697+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379347837"/>
+        <radio op="I TIM" rat="LTE" q="79.20" rsrp="-92" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="54.00" rsrp="-98" sinr="15" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176655" lon="10.4940822">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:36:22.8+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379378956"/>
+        <radio op="I TIM" rat="LTE" q="79.20" rsrp="-92" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="54.00" rsrp="-98" sinr="15" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176637" lon="10.4940962">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:36:53.992+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="86" state="moving" tsMs="1772379410050"/>
+        <radio op="I TIM" rat="LTE" q="69.30" rsrp="-92" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="72.50" rsrp="-96" sinr="21" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617671" lon="10.4941143">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:37:25.196+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379441362"/>
+        <radio op="I TIM" rat="LTE" q="69.30" rsrp="-92" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="72.50" rsrp="-96" sinr="21" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617663" lon="10.4940884">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:37:56.407+01:00</time>
+      <extensions>
+        <activity type="ON_BICYCLE" conf="81" state="moving" tsMs="1772379472467"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-85" sinr="27" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="81.60" rsrp="-91" sinr="19" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176656" lon="10.4940707">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:38:27.549+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379503685"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-85" sinr="27" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="81.60" rsrp="-91" sinr="19" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176778" lon="10.4940541">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:38:58.768+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379534893"/>
+        <radio op="I TIM" rat="LTE" q="52.20" rsrp="-96" sinr="13" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="70.00" rsrp="-97" sinr="25" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176365" lon="10.4940707">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:39:30.039+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379566044"/>
+        <radio op="I TIM" rat="LTE" q="52.20" rsrp="-96" sinr="13" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="70.00" rsrp="-97" sinr="25" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177392" lon="10.4940473">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:40:01.355+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379597343"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="23" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="76.80" rsrp="-93" sinr="19" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177274" lon="10.4940405">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:40:32.543+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="86" state="still" tsMs="1772379628558"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="23" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="76.80" rsrp="-93" sinr="19" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617595" lon="10.4946761">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:41:03.641+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379659779"/>
+        <radio op="I TIM" rat="LTE" q="71.30" rsrp="-94" sinr="18" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-100" sinr="19" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176499" lon="10.494154">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:41:34.955+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="52" state="still" tsMs="1772379690880"/>
+        <radio op="I TIM" rat="LTE" q="71.30" rsrp="-94" sinr="18" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-100" sinr="19" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176261" lon="10.4945877">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:42:06.308+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379722252"/>
+        <radio op="I TIM" rat="LTE" q="72.50" rsrp="-96" sinr="25" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="55.00" rsrp="-103" sinr="20" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176461" lon="10.494426">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:42:37.441+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="42" state="still" tsMs="1772379753524"/>
+        <radio op="I TIM" rat="LTE" q="72.50" rsrp="-96" sinr="25" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="55.00" rsrp="-103" sinr="20" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176393" lon="10.4943672">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:43:08.568+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379784685"/>
+        <radio op="I TIM" rat="LTE" q="92.00" rsrp="-82" sinr="18" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="65.00" rsrp="-99" sinr="24" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176537" lon="10.4941433">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:43:39.905+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="70" state="still" tsMs="1772379815792"/>
+        <radio op="I TIM" rat="LTE" q="92.00" rsrp="-82" sinr="18" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="65.00" rsrp="-99" sinr="24" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177278" lon="10.4940594">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:44:11.061+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379847080"/>
+        <radio op="I TIM" rat="LTE" q="80.00" rsrp="-93" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-101" sinr="22" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177012" lon="10.4940625">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:44:42.353+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="39" state="still" tsMs="1772379878355"/>
+        <radio op="I TIM" rat="LTE" q="80.00" rsrp="-93" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-101" sinr="22" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176551" lon="10.4940924">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:45:13.553+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772379909563"/>
+        <radio op="I TIM" rat="LTE" q="85.00" rsrp="-91" sinr="26" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="44.80" rsrp="-97" sinr="11" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176664" lon="10.4940691">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:45:45.01+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="59" state="still" tsMs="1772379941087"/>
+        <radio op="I TIM" rat="LTE" q="85.00" rsrp="-91" sinr="26" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="44.80" rsrp="-97" sinr="11" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176658" lon="10.4940622">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:46:16.404+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="98" state="still" tsMs="1772379972271"/>
+        <radio op="I TIM" rat="LTE" q="92.50" rsrp="-88" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="67.50" rsrp="-98" sinr="23" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176572" lon="10.4940815">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:46:47.797+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="57" state="still" tsMs="1772380003693"/>
+        <radio op="I TIM" rat="LTE" q="92.50" rsrp="-88" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="67.50" rsrp="-98" sinr="23" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176661" lon="10.494074">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:47:18.914+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380035068"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="25" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="72.50" rsrp="-96" sinr="22" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176584" lon="10.4940889">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:51:31.319+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380288734"/>
+        <radio op="I TIM" rat="LTE" q="75.00" rsrp="-95" sinr="21" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="24" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176668" lon="10.4940688">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:52:02.579+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380322161"/>
+        <radio op="I TIM" rat="LTE" q="85.00" rsrp="-91" sinr="27" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="65.00" rsrp="-99" sinr="22" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176674" lon="10.4940626">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:52:33.714+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380350205"/>
+        <radio op="I TIM" rat="LTE" q="85.00" rsrp="-91" sinr="27" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="65.00" rsrp="-99" sinr="22" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176984" lon="10.4940289">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:53:04.92+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380380968"/>
+        <radio op="I TIM" rat="LTE" q="85.00" rsrp="-91" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="72.50" rsrp="-96" sinr="20" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176898" lon="10.494069">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:57:39.647+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380658167"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="27" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="67.50" rsrp="-98" sinr="27" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176663" lon="10.4940734">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:58:10.822+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380690709"/>
+        <radio op="I TIM" rat="LTE" q="85.80" rsrp="-86" sinr="17" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="39.20" rsrp="-97" sinr="9" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176558" lon="10.4940971">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:58:42.379+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380721896"/>
+        <radio op="I TIM" rat="LTE" q="85.80" rsrp="-86" sinr="17" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="39.20" rsrp="-97" sinr="9" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176209" lon="10.4942938">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:58:52.729+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380721896"/>
+        <radio op="I TIM" rat="LTE" q="88.00" rsrp="-85" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="25" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176205" lon="10.4942927">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:58:58.729+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380725830"/>
+        <radio op="I TIM" rat="LTE" q="88.00" rsrp="-85" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="25" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617672" lon="10.4943088">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:59:12.729+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380749320"/>
+        <radio op="I TIM" rat="LTE" q="88.00" rsrp="-85" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="25" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176559" lon="10.4940928">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T16:59:44.166+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380780427"/>
+        <radio op="I TIM" rat="LTE" q="88.00" rsrp="-85" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="25" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176494" lon="10.494048">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:02:35.155+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772380933442"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="22" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="22" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176524" lon="10.4940902">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:03:06.382+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772380982100"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="22" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="22" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176501" lon="10.4940668">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:03:37.65+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381013842"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="26" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="43.50" rsrp="-96" sinr="10" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176615" lon="10.4940876">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:04:08.968+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381045075"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="26" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="43.50" rsrp="-96" sinr="10" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617637" lon="10.4945041">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:04:40.192+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="55" state="still" tsMs="1772381076519"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="21" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="34.80" rsrp="-96" sinr="7" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176671" lon="10.4941071">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:05:11.344+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="97" state="still" tsMs="1772381107664"/>
+        <radio op="I TIM" rat="LTE" q="87.50" rsrp="-90" sinr="21" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="34.80" rsrp="-96" sinr="7" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6175843" lon="10.4943662">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:05:44.781+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381150429"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="66.00" rsrp="-92" sinr="15" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176458" lon="10.4942029">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:06:15.407+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381166414"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="66.00" rsrp="-92" sinr="15" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176554" lon="10.4940582">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:06:46.759+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="43" state="still" tsMs="1772381203247"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="22" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="51.20" rsrp="-93" sinr="11" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176746" lon="10.4940572">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:07:17.929+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="56" state="still" tsMs="1772381234277"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="22" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="51.20" rsrp="-93" sinr="11" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176275" lon="10.4943055">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:07:37.768+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381253425"/>
+        <radio op="I TIM" rat="LTE" q="75.60" rsrp="-89" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="69.00" rsrp="-95" sinr="18" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176272" lon="10.4943055">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:07:48.768+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381257038"/>
+        <radio op="I TIM" rat="LTE" q="75.60" rsrp="-89" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="69.00" rsrp="-95" sinr="18" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176271" lon="10.4943055">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:07:58.767+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381257038"/>
+        <radio op="I TIM" rat="LTE" q="75.60" rsrp="-89" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="69.00" rsrp="-95" sinr="18" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176271" lon="10.4943055">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:08:08.768+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381273715"/>
+        <radio op="I TIM" rat="LTE" q="75.60" rsrp="-89" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="69.00" rsrp="-95" sinr="18" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176271" lon="10.4943055">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:08:13.767+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381273715"/>
+        <radio op="I TIM" rat="LTE" q="75.60" rsrp="-89" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="69.00" rsrp="-95" sinr="18" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176518" lon="10.4940637">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:08:49.881+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="47" state="still" tsMs="1772381325768"/>
+        <radio op="I TIM" rat="LTE" q="73.60" rsrp="-93" sinr="18" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="54.00" rsrp="-95" sinr="13" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6175714" lon="10.4943722">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:09:10.767+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381346979"/>
+        <radio op="I TIM" rat="LTE" q="73.60" rsrp="-93" sinr="18" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="54.00" rsrp="-95" sinr="13" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6175692" lon="10.494269">
+      <ele>223.3000030517578</ele>
+      <time>2026-03-01T17:09:14.767+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381346979"/>
+        <radio op="I TIM" rat="LTE" q="73.60" rsrp="-93" sinr="18" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="54.00" rsrp="-95" sinr="13" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176555" lon="10.4940846">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:09:51.726+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772381387602"/>
+        <radio op="I TIM" rat="LTE" q="75.90" rsrp="-92" sinr="18" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="97.50" rsrp="-86" sinr="23" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176817" lon="10.4940492">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:10:23.143+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772381419500"/>
+        <radio op="I TIM" rat="LTE" q="75.90" rsrp="-92" sinr="18" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="97.50" rsrp="-86" sinr="23" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176618" lon="10.494093">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:10:54.727+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772381450907"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="50.60" rsrp="-103" sinr="18" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176187" lon="10.4943627">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:11:13.767+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="85" state="still" tsMs="1772381471714"/>
+        <radio op="I TIM" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="50.60" rsrp="-103" sinr="18" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617664" lon="10.494054">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:11:46.338+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381503773"/>
+        <radio op="I TIM" rat="LTE" q="80.00" rsrp="-93" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-100" sinr="19" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.61756" lon="10.4943013">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:12:19.276+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="49" state="still" tsMs="1772381537415"/>
+        <radio op="I TIM" rat="LTE" q="80.00" rsrp="-93" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-100" sinr="19" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176625" lon="10.4940781">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:12:50.009+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381568741"/>
+        <radio op="I TIM" rat="LTE" q="85.00" rsrp="-91" sinr="20" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="55.20" rsrp="-101" sinr="18" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176458" lon="10.4940672">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:13:21.303+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="49" state="still" tsMs="1772381601058"/>
+        <radio op="I TIM" rat="LTE" q="85.00" rsrp="-91" sinr="20" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="55.20" rsrp="-101" sinr="18" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177107" lon="10.494047">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:13:52.51+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381632370"/>
+        <radio op="I TIM" rat="LTE" q="59.40" rsrp="-98" sinr="17" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="62.50" rsrp="-100" sinr="23" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176704" lon="10.494048">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:14:23.926+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="88" state="moving" tsMs="1772381663549"/>
+        <radio op="I TIM" rat="LTE" q="59.40" rsrp="-98" sinr="17" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="62.50" rsrp="-100" sinr="23" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177013" lon="10.4940772">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:14:55.208+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="85" state="moving" tsMs="1772381694995"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="46.80" rsrp="-99" sinr="13" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176243" lon="10.4947961">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:15:26.314+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="89" state="moving" tsMs="1772381726258"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="46.80" rsrp="-99" sinr="13" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176496" lon="10.4941452">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:15:57.553+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="86" state="moving" tsMs="1772381757268"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-84" sinr="22" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="67.20" rsrp="-97" sinr="19" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176594" lon="10.4940927">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:16:28.705+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381788540"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-84" sinr="22" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="67.20" rsrp="-97" sinr="19" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176641" lon="10.494072">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:16:59.729+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381819715"/>
+        <radio op="I TIM" rat="LTE" q="75.00" rsrp="-95" sinr="20" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="47.50" rsrp="-100" sinr="14" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177212" lon="10.4940546">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:17:30.866+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="93" state="moving" tsMs="1772381850783"/>
+        <radio op="I TIM" rat="LTE" q="75.00" rsrp="-95" sinr="20" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="47.50" rsrp="-100" sinr="14" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177042" lon="10.4940306">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:18:02.232+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381881936"/>
+        <radio op="I TIM" rat="LTE" q="88.80" rsrp="-88" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="57.50" rsrp="-100" sinr="18" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176836" lon="10.4940489">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:18:33.516+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381913254"/>
+        <radio op="I TIM" rat="LTE" q="88.80" rsrp="-88" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="57.50" rsrp="-100" sinr="18" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6175889" lon="10.4943263">
+      <ele>270.20001220703125</ele>
+      <time>2026-03-01T17:19:09.768+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="38" state="still" tsMs="1772381944523"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-82" sinr="21" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="52.90" rsrp="-102" sinr="18" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176282" lon="10.4943988">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:19:34.768+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772381970396"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-82" sinr="21" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="52.90" rsrp="-102" sinr="18" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176562" lon="10.494114">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:20:05.502+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382003167"/>
+        <radio op="I TIM" rat="LTE" q="88.80" rsrp="-88" sinr="19" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="80.00" rsrp="-93" sinr="20" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176643" lon="10.4940721">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:20:36.815+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382036583"/>
+        <radio op="I TIM" rat="LTE" q="88.80" rsrp="-88" sinr="19" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="80.00" rsrp="-93" sinr="20" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176501" lon="10.4940672">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:21:08.189+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="51" state="still" tsMs="1772382067874"/>
+        <radio op="I TIM" rat="LTE" q="69.30" rsrp="-92" sinr="16" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="97.50" rsrp="-86" sinr="26" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176918" lon="10.4940444">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:21:39.412+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382099265"/>
+        <radio op="I TIM" rat="LTE" q="69.30" rsrp="-92" sinr="16" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="97.50" rsrp="-86" sinr="26" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176389" lon="10.4940902">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:22:10.793+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382130577"/>
+        <radio op="I TIM" rat="LTE" q="80.00" rsrp="-93" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="54.00" rsrp="-95" sinr="13" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176468" lon="10.4942093">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:22:42.188+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="95" state="moving" tsMs="1772382158830"/>
+        <radio op="I TIM" rat="LTE" q="80.00" rsrp="-93" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="54.00" rsrp="-95" sinr="13" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176601" lon="10.4941398">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:23:13.449+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772382189962"/>
+        <radio op="I TIM" rat="LTE" q="78.20" rsrp="-91" sinr="18" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="66.00" rsrp="-95" sinr="17" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6175885" lon="10.4951042">
+      <ele>223.3000030517578</ele>
+      <time>2026-03-01T17:23:44.813+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382221231"/>
+        <radio op="I TIM" rat="LTE" q="78.20" rsrp="-91" sinr="18" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="66.00" rsrp="-95" sinr="17" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176733" lon="10.4940589">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:24:16.131+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382252545"/>
+        <radio op="I TIM" rat="LTE" q="82.80" rsrp="-89" sinr="18" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-85" sinr="28" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177051" lon="10.4940568">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:24:47.508+01:00</time>
+      <extensions>
+        <activity type="ON_BICYCLE" conf="81" state="moving" tsMs="1772382283945"/>
+        <radio op="I TIM" rat="LTE" q="82.80" rsrp="-89" sinr="18" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="100.00" rsrp="-85" sinr="28" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176545" lon="10.4945086">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:25:18.886+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382315356"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="21" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="95.00" rsrp="-87" sinr="28" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176721" lon="10.4940638">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:25:50.13+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="92" state="moving" tsMs="1772382346718"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="21" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="95.00" rsrp="-87" sinr="28" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176209" lon="10.4946469">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:26:17.791+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="90" state="moving" tsMs="1772382377903"/>
+        <radio op="I TIM" rat="LTE" q="84.00" rsrp="-90" sinr="19" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="64.40" rsrp="-97" sinr="18" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176313" lon="10.4944868">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:26:51.836+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382408125"/>
+        <radio op="I TIM" rat="LTE" q="84.00" rsrp="-90" sinr="19" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="64.40" rsrp="-97" sinr="18" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176569" lon="10.4940777">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:27:18.22+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382439410"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="65.00" rsrp="-99" sinr="22" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176667" lon="10.494074">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:27:53.913+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382470122"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="65.00" rsrp="-99" sinr="22" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176649" lon="10.4940742">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:28:25.104+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382500458"/>
+        <radio op="I TIM" rat="LTE" q="75.00" rsrp="-95" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="20" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176895" lon="10.4940706">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:28:38.8+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="81" state="moving" tsMs="1772382516629"/>
+        <radio op="I TIM" rat="LTE" q="75.00" rsrp="-95" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="20" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176766" lon="10.4940586">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:28:52.824+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382520109"/>
+        <radio op="I TIM" rat="LTE" q="75.00" rsrp="-95" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="20" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177012" lon="10.4940504">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:28:58.432+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382520109"/>
+        <radio op="I TIM" rat="LTE" q="75.00" rsrp="-95" sinr="24" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="20" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176636" lon="10.4940976">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:29:09.565+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="44" state="still" tsMs="1772382536382"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="23" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="72.50" rsrp="-96" sinr="20" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176514" lon="10.4940635">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:29:20.735+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="98" state="still" tsMs="1772382553109"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="23" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="72.50" rsrp="-96" sinr="20" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176697" lon="10.4940864">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:29:31.856+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="49" state="still" tsMs="1772382564253"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="23" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="72.50" rsrp="-96" sinr="20" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176592" lon="10.4941059">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:29:43.073+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772382580996"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="23" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="72.50" rsrp="-96" sinr="20" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176592" lon="10.4941059">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:30:07.465+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="45" state="still" tsMs="1772382613291"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="21" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="51.00" rsrp="-95" sinr="12" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176592" lon="10.4941059">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:30:37.469+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="48" state="still" tsMs="1772382634601"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="21" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="51.00" rsrp="-95" sinr="12" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176582" lon="10.4940967">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:30:50.522+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382650577"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="21" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="51.00" rsrp="-95" sinr="12" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176591" lon="10.4940979">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:31:01.779+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772382654075"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="21" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="51.00" rsrp="-95" sinr="12" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176533" lon="10.4941184">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:31:26.287+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382681313"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="22" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176512" lon="10.494084">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:31:31.886+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382684821"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="75.00" rsrp="-95" sinr="22" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6178531" lon="10.4939053">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:33:30.802+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382810618"/>
+        <radio op="I TIM" rat="LTE" q="74.00" rsrp="-88" sinr="15" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="87.50" rsrp="-90" sinr="24" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176411" lon="10.4940893">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:34:02.007+01:00</time>
+      <extensions>
+        <activity type="ON_BICYCLE" conf="97" state="moving" tsMs="1772382841905"/>
+        <radio op="I TIM" rat="LTE" q="74.00" rsrp="-88" sinr="15" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="87.50" rsrp="-90" sinr="24" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617657" lon="10.4940592">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:34:33.316+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382867908"/>
+        <radio op="I TIM" rat="LTE" q="74.80" rsrp="-91" sinr="17" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="70.00" rsrp="-97" sinr="21" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176138" lon="10.4946055">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:35:04.647+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="90" state="moving" tsMs="1772382904463"/>
+        <radio op="I TIM" rat="LTE" q="74.80" rsrp="-91" sinr="17" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="70.00" rsrp="-97" sinr="21" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176667" lon="10.4941341">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:35:35.99+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="92" state="moving" tsMs="1772382935802"/>
+        <radio op="I TIM" rat="LTE" q="80.00" rsrp="-93" sinr="24" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="44.80" rsrp="-97" sinr="11" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176421" lon="10.4940542">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:36:03.004+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382961730"/>
+        <radio op="I TIM" rat="LTE" q="80.00" rsrp="-93" sinr="24" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="44.80" rsrp="-97" sinr="11" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176633" lon="10.4940719">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:36:33.05+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772382992850"/>
+        <radio op="I TIM" rat="LTE" q="92.50" rsrp="-88" sinr="23" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="70.00" rsrp="-97" sinr="22" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176619" lon="10.4940664">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:37:07.924+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772383024304"/>
+        <radio op="I TIM" rat="LTE" q="92.50" rsrp="-88" sinr="23" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="70.00" rsrp="-97" sinr="22" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176739" lon="10.49406">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:37:39.094+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772383055469"/>
+        <radio op="I TIM" rat="LTE" q="82.80" rsrp="-89" sinr="18" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="73.60" rsrp="-93" sinr="18" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176563" lon="10.4940631">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:38:10.067+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="95" state="moving" tsMs="1772383086567"/>
+        <radio op="I TIM" rat="LTE" q="82.80" rsrp="-89" sinr="18" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="73.60" rsrp="-93" sinr="18" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176698" lon="10.4940616">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:38:41.265+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="87" state="moving" tsMs="1772383117465"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="23" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="52.70" rsrp="-94" sinr="12" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176515" lon="10.4940626">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:39:12.429+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="33" state="still" tsMs="1772383148787"/>
+        <radio op="I TIM" rat="LTE" q="90.00" rsrp="-89" sinr="23" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="52.70" rsrp="-94" sinr="12" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176713" lon="10.4940747">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:39:43.556+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772383179919"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="22" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="48.00" rsrp="-93" sinr="10" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617642" lon="10.494082">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:40:14.733+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772383211079"/>
+        <radio op="I TIM" rat="LTE" q="95.00" rsrp="-87" sinr="22" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="48.00" rsrp="-93" sinr="10" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176749" lon="10.4940417">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:40:40.938+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772383241050"/>
+        <radio op="I TIM" rat="LTE" q="63.00" rsrp="-95" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="68.00" rsrp="-91" sinr="15" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176256" lon="10.4945754">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:41:16.118+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772383272959"/>
+        <radio op="I TIM" rat="LTE" q="63.00" rsrp="-95" sinr="16" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="68.00" rsrp="-91" sinr="15" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617668" lon="10.4941073">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:41:47.315+01:00</time>
+      <extensions>
+        <activity type="ON_BICYCLE" conf="96" state="moving" tsMs="1772383303757"/>
+        <radio op="I TIM" rat="LTE" q="81.40" rsrp="-88" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="85.00" rsrp="-91" sinr="27" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176749" lon="10.4941171">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:42:18.414+01:00</time>
+      <extensions>
+        <activity type="ON_BICYCLE" conf="90" state="moving" tsMs="1772383334271"/>
+        <radio op="I TIM" rat="LTE" q="81.40" rsrp="-88" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="85.00" rsrp="-91" sinr="27" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6181917" lon="10.4938032">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:42:45.139+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="91" state="moving" tsMs="1772383365242"/>
+        <radio op="I TIM" rat="LTE" q="85.00" rsrp="-91" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="70.00" rsrp="-97" sinr="21" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177129" lon="10.4940373">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:43:20.105+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="88" state="moving" tsMs="1772383396654"/>
+        <radio op="I TIM" rat="LTE" q="85.00" rsrp="-91" sinr="20" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="70.00" rsrp="-97" sinr="21" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176472" lon="10.4940967">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:43:51.358+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772383427886"/>
+        <radio op="I TIM" rat="LTE" q="82.50" rsrp="-92" sinr="21" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="67.50" rsrp="-98" sinr="20" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177371" lon="10.4941105">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:44:22.565+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772383459110"/>
+        <radio op="I TIM" rat="LTE" q="82.50" rsrp="-92" sinr="21" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="67.50" rsrp="-98" sinr="20" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176446" lon="10.494046">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:44:53.851+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772383490334"/>
+        <radio op="I TIM" rat="LTE" q="56.00" rsrp="-97" sinr="15" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-95" sinr="15" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177589" lon="10.4940375">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:45:25.033+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="87" state="moving" tsMs="1772383521445"/>
+        <radio op="I TIM" rat="LTE" q="56.00" rsrp="-97" sinr="15" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="60.00" rsrp="-95" sinr="15" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6177209" lon="10.4940243">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:45:56.345+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772383552648"/>
+        <radio op="I TIM" rat="LTE" q="51.30" rsrp="-98" sinr="14" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="35.10" rsrp="-98" sinr="8" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617838" lon="10.4937085">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:46:25.968+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="95" state="moving" tsMs="1772383583987"/>
+        <radio op="I TIM" rat="LTE" q="51.30" rsrp="-98" sinr="14" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="35.10" rsrp="-98" sinr="8" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.617844" lon="10.493716">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:46:55.948+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772383615475"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-84" sinr="24" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="50.60" rsrp="-102" sinr="17" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6176873" lon="10.4940205">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:47:29.647+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383645870"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-84" sinr="24" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="50.60" rsrp="-102" sinr="17" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6180832" lon="10.493625">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:48:00.809+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383677020"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-83" sinr="26" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="83.60" rsrp="-87" sinr="17" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6155993" lon="10.4958512">
+      <ele>225.00001525878906</ele>
+      <time>2026-03-01T17:48:38.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383722667"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-83" sinr="26" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="83.60" rsrp="-87" sinr="17" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6122828" lon="10.4959275">
+      <ele>222.22538102399585</ele>
+      <time>2026-03-01T17:49:14.991+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383754518"/>
+        <radio op="I TIM" rat="LTE" rsrp="-111" rsrq="-16"/>
+        <radio op="vodafone IT" rat="LTE" q="48.30" rsrp="-102" sinr="16" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.611825" lon="10.4957164">
+      <ele>222.31938027273674</ele>
+      <time>2026-03-01T17:49:20.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383754518"/>
+        <radio op="I TIM" rat="LTE" rsrp="-111" rsrq="-16"/>
+        <radio op="vodafone IT" rat="LTE" q="48.30" rsrp="-102" sinr="16" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6112592" lon="10.4954325">
+      <ele>219.3000030517578</ele>
+      <time>2026-03-01T17:49:31.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383775731"/>
+        <radio op="I TIM" rat="LTE" rsrp="-111" rsrq="-16"/>
+        <radio op="vodafone IT" rat="LTE" q="48.30" rsrp="-102" sinr="16" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6112592" lon="10.4954325">
+      <ele>216.20001220703125</ele>
+      <time>2026-03-01T17:49:35.613+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="89" state="moving" tsMs="1772383781077"/>
+        <radio op="I TIM" rat="LTE" rsrp="-111" rsrq="-16"/>
+        <radio op="vodafone IT" rat="LTE" q="48.30" rsrp="-102" sinr="16" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6114989" lon="10.494789">
+      <ele>219.40000915527344</ele>
+      <time>2026-03-01T17:50:06.425+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383802420"/>
+        <radio op="I TIM" rat="LTE" rsrp="-111" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-120" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.612211" lon="10.4911601">
+      <ele>232.0010700065042</ele>
+      <time>2026-03-01T17:50:37.605+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383836946"/>
+        <radio op="I TIM" rat="LTE" rsrp="-111" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-120" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6123547" lon="10.4863201">
+      <ele>254.10401080450538</ele>
+      <time>2026-03-01T17:51:08.747+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383868749"/>
+        <radio op="I TIM" rat="LTE" rsrp="-114" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="34.20" rsrp="-106" sinr="13" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6115595" lon="10.4813195">
+      <ele>270.0</ele>
+      <time>2026-03-01T17:51:35.959+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383896744"/>
+        <radio op="I TIM" rat="LTE" rsrp="-114" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="34.20" rsrp="-106" sinr="13" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6118796" lon="10.4806327">
+      <ele>270.0</ele>
+      <time>2026-03-01T17:51:45.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772383900456"/>
+        <radio op="I TIM" rat="LTE" rsrp="-114" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="34.20" rsrp="-106" sinr="13" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6087731" lon="10.4757643">
+      <ele>274.4538006732293</ele>
+      <time>2026-03-01T17:52:20.473+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383935586"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-81" sinr="22" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-6"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6080387" lon="10.4744185">
+      <ele>273.90454878083193</ele>
+      <time>2026-03-01T17:52:30.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383945869"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-81" sinr="22" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-6"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6075653" lon="10.4725505">
+      <ele>273.87606293502694</ele>
+      <time>2026-03-01T17:52:40.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772383945869"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-81" sinr="22" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-6"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6070385" lon="10.4706047">
+      <ele>273.77788461840294</ele>
+      <time>2026-03-01T17:52:50.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772383971400"/>
+        <radio op="I TIM" rat="LTE" q="100.00" rsrp="-81" sinr="22" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="97.50" rsrp="-86" sinr="20" rsrq="-6"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6065037" lon="10.4687871">
+      <ele>272.9876483351476</ele>
+      <time>2026-03-01T17:53:00.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772383976745"/>
+        <radio op="I TIM" rat="LTE" rsrp="-108" rsrq="-16"/>
+        <radio op="vodafone IT" rat="LTE" q="88.00" rsrp="-81" sinr="17" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6059164" lon="10.4669116">
+      <ele>271.9500221516007</ele>
+      <time>2026-03-01T17:53:10.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="98" state="moving" tsMs="1772383987375"/>
+        <radio op="I TIM" rat="LTE" rsrp="-108" rsrq="-16"/>
+        <radio op="vodafone IT" rat="LTE" q="88.00" rsrp="-81" sinr="17" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6053914" lon="10.4652194">
+      <ele>270.7424165288413</ele>
+      <time>2026-03-01T17:53:20.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772383998009"/>
+        <radio op="I TIM" rat="LTE" rsrp="-108" rsrq="-16"/>
+        <radio op="vodafone IT" rat="LTE" q="88.00" rsrp="-81" sinr="17" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6049587" lon="10.4637305">
+      <ele>269.5095954407762</ele>
+      <time>2026-03-01T17:53:31.771+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772384008657"/>
+        <radio op="I TIM" rat="LTE" rsrp="-108" rsrq="-16"/>
+        <radio op="vodafone IT" rat="LTE" q="88.00" rsrp="-81" sinr="17" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6044954" lon="10.4622314">
+      <ele>269.66516540699206</ele>
+      <time>2026-03-01T17:53:41.771+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="98" state="moving" tsMs="1772384013961"/>
+        <radio op="I TIM" rat="LTE" rsrp="-108" rsrq="-16"/>
+        <radio op="vodafone IT" rat="LTE" q="88.00" rsrp="-81" sinr="17" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.603993" lon="10.4605666">
+      <ele>267.0</ele>
+      <time>2026-03-01T17:53:51.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772384018827"/>
+        <radio op="I TIM" rat="LTE" rsrp="-108" rsrq="-16"/>
+        <radio op="vodafone IT" rat="LTE" q="88.00" rsrp="-81" sinr="17" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6035156" lon="10.4589632">
+      <ele>267.0</ele>
+      <time>2026-03-01T17:54:01.769+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384037931"/>
+        <radio op="I TIM" rat="LTE" q="48.60" rsrp="-98" sinr="13" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="28.60" rsrp="-103" sinr="8" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.603333" lon="10.4579469">
+      <ele>267.0</ele>
+      <time>2026-03-01T17:54:11.769+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384048593"/>
+        <radio op="I TIM" rat="LTE" q="48.60" rsrp="-98" sinr="13" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="28.60" rsrp="-103" sinr="8" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6029838" lon="10.4572185">
+      <ele>267.0</ele>
+      <time>2026-03-01T17:54:21.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384059207"/>
+        <radio op="I TIM" rat="LTE" q="48.60" rsrp="-98" sinr="13" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="28.60" rsrp="-103" sinr="8" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6026546" lon="10.456112">
+      <ele>267.0</ele>
+      <time>2026-03-01T17:54:31.769+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384069889"/>
+        <radio op="I TIM" rat="LTE" q="48.60" rsrp="-98" sinr="13" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="28.60" rsrp="-103" sinr="8" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025161" lon="10.4555391">
+      <ele>267.0</ele>
+      <time>2026-03-01T17:54:41.769+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384080559"/>
+        <radio op="I TIM" rat="LTE" q="48.60" rsrp="-98" sinr="13" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="28.60" rsrp="-103" sinr="8" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6022441" lon="10.4549648">
+      <ele>262.0</ele>
+      <time>2026-03-01T17:54:51.77+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384091236"/>
+        <radio op="I TIM" rat="LTE" q="48.60" rsrp="-98" sinr="13" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="28.60" rsrp="-103" sinr="8" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6017862" lon="10.4542478">
+      <ele>255.0</ele>
+      <time>2026-03-01T17:55:01.769+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="96" state="moving" tsMs="1772384101935"/>
+        <radio op="I TIM" rat="LTE" q="57.60" rsrp="-93" sinr="13" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="17.50" rsrp="-100" sinr="2" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6017856" lon="10.4542391">
+      <ele>255.0</ele>
+      <time>2026-03-01T17:55:04.769+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="85" state="moving" tsMs="1772384112553"/>
+        <radio op="I TIM" rat="LTE" q="57.60" rsrp="-93" sinr="13" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="17.50" rsrp="-100" sinr="2" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6005676" lon="10.451884">
+      <ele>261.4835999488348</ele>
+      <time>2026-03-01T17:55:43.399+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384139144"/>
+        <radio op="I TIM" rat="LTE" q="57.60" rsrp="-93" sinr="13" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="17.50" rsrp="-100" sinr="2" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5997261" lon="10.4509559">
+      <ele>259.20001220703125</ele>
+      <time>2026-03-01T17:55:50.769+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384154173"/>
+        <radio op="I TIM" rat="LTE" q="57.60" rsrp="-93" sinr="13" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="17.50" rsrp="-100" sinr="2" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5977773" lon="10.4471619">
+      <ele>257.20001220703125</ele>
+      <time>2026-03-01T17:56:24.873+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384180736"/>
+        <radio op="I TIM" rat="LTE" q="76.00" rsrp="-84" sinr="14" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="32.40" rsrp="-89" sinr="4" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5970119" lon="10.4466351">
+      <ele>257.20001220703125</ele>
+      <time>2026-03-01T17:56:30.769+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384195632"/>
+        <radio op="I TIM" rat="LTE" q="76.00" rsrp="-84" sinr="14" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="32.40" rsrp="-89" sinr="4" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5943548" lon="10.4428983">
+      <ele>255.10000610351562</ele>
+      <time>2026-03-01T17:57:06.453+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384222155"/>
+        <radio op="I TIM" rat="LTE" q="72.00" rsrp="-84" sinr="13" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="25.60" rsrp="-93" sinr="3" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5926584" lon="10.4426535">
+      <ele>252.40000915527344</ele>
+      <time>2026-03-01T17:57:38.493+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="97" state="moving" tsMs="1772384258448"/>
+        <radio op="I TIM" rat="LTE" q="72.00" rsrp="-84" sinr="13" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="25.60" rsrp="-93" sinr="3" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5934016" lon="10.4424588">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T17:58:09.891+01:00</time>
+      <extensions>
+        <activity type="TILTING" conf="100" state="moving" tsMs="1772384278022"/>
+        <radio op="I TIM" rat="LTE" q="36.00" rsrp="-75" sinr="4" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-85" rsrq="-15"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932711" lon="10.4423974">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T17:58:44.769+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772384324744"/>
+        <radio op="I TIM" rat="LTE" q="36.00" rsrp="-75" sinr="4" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-85" rsrq="-15"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5928248" lon="10.442531">
+      <ele>254.3000030517578</ele>
+      <time>2026-03-01T17:59:21.599+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="28" state="still" tsMs="1772384348763"/>
+        <radio op="I TIM" rat="LTE" q="36.00" rsrp="-75" sinr="4" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-85" rsrq="-15"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932198" lon="10.4428206">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:00:03.651+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772384399257"/>
+        <radio op="I TIM" rat="LTE" q="91.20" rsrp="-87" sinr="19" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="69.60" rsrp="-96" sinr="19" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932157" lon="10.4427929">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:00:49.644+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384449652"/>
+        <radio op="I TIM" rat="LTE" q="74.80" rsrp="-91" sinr="17" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="28.80" rsrp="-101" sinr="7" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5933042" lon="10.4426366">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:01:20.883+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="91" state="moving" tsMs="1772384479416"/>
+        <radio op="I TIM" rat="LTE" q="74.80" rsrp="-91" sinr="17" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="28.80" rsrp="-101" sinr="7" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932977" lon="10.4426519">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:01:54.055+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384512334"/>
+        <radio op="I TIM" rat="LTE" q="47.50" rsrp="-100" sinr="14" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="30.00" rsrp="-105" sinr="10" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5933246" lon="10.4425963">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:02:16.414+01:00</time>
+      <extensions>
+        <activity type="IN_VEHICLE" conf="71" state="moving" tsMs="1772384517458"/>
+        <radio op="I TIM" rat="LTE" q="47.50" rsrp="-100" sinr="14" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="30.00" rsrp="-105" sinr="10" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932744" lon="10.4423971">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:02:44.77+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="87" state="moving" tsMs="1772384562311"/>
+        <radio op="I TIM" rat="LTE" q="81.60" rsrp="-91" sinr="19" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="49.60" rsrp="-94" sinr="11" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932715" lon="10.4423975">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:02:55.77+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384573140"/>
+        <radio op="I TIM" rat="LTE" q="81.60" rsrp="-91" sinr="19" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="49.60" rsrp="-94" sinr="11" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932724" lon="10.4423966">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:03:05.77+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384583976"/>
+        <radio op="I TIM" rat="LTE" q="81.60" rsrp="-91" sinr="19" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="49.60" rsrp="-94" sinr="11" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932726" lon="10.4423965">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:03:15.77+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384594831"/>
+        <radio op="I TIM" rat="LTE" q="81.60" rsrp="-91" sinr="19" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="49.60" rsrp="-94" sinr="11" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932728" lon="10.442397">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:03:22.771+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384605726"/>
+        <radio op="I TIM" rat="LTE" q="81.60" rsrp="-91" sinr="19" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="49.60" rsrp="-94" sinr="11" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932735" lon="10.4423965">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:03:36.77+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384616581"/>
+        <radio op="I TIM" rat="LTE" q="81.60" rsrp="-91" sinr="19" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="49.60" rsrp="-94" sinr="11" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932735" lon="10.4423959">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:03:47.77+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="81" state="moving" tsMs="1772384627439"/>
+        <radio op="I TIM" rat="LTE" q="59.40" rsrp="-92" sinr="13" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="19.20" rsrp="-101" sinr="3" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932725" lon="10.4423968">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:03:58.77+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="90" state="moving" tsMs="1772384638315"/>
+        <radio op="I TIM" rat="LTE" q="59.40" rsrp="-92" sinr="13" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="19.20" rsrp="-101" sinr="3" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932745" lon="10.4423892">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:04:09.77+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384649162"/>
+        <radio op="I TIM" rat="LTE" q="59.40" rsrp="-92" sinr="13" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="19.20" rsrp="-101" sinr="3" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932733" lon="10.4423949">
+      <ele>250.0</ele>
+      <time>2026-03-01T18:04:15.77+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384654577"/>
+        <radio op="I TIM" rat="LTE" q="59.40" rsrp="-92" sinr="13" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="19.20" rsrp="-101" sinr="3" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5933936" lon="10.4425162">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:05:25.035+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772384720002"/>
+        <radio op="I TIM" rat="LTE" q="73.50" rsrp="-90" sinr="16" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="61.60" rsrp="-97" sinr="17" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.59349" lon="10.442391">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:06:15.373+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384775059"/>
+        <radio op="I TIM" rat="LTE" q="73.50" rsrp="-90" sinr="16" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="61.60" rsrp="-97" sinr="17" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5934014" lon="10.44245">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:07:00.698+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="86" state="still" tsMs="1772384809058"/>
+        <radio op="I TIM" rat="LTE" q="69.30" rsrp="-92" sinr="16" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="47.50" rsrp="-100" sinr="14" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5933841" lon="10.4424508">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:07:46.346+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384866053"/>
+        <radio op="I TIM" rat="LTE" q="69.30" rsrp="-92" sinr="16" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="47.50" rsrp="-100" sinr="14" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932243" lon="10.4427716">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:08:53.311+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="92" state="moving" tsMs="1772384926359"/>
+        <radio op="I TIM" rat="LTE" q="74.40" rsrp="-94" sinr="19" rsrq="-6"/>
+        <radio op="vodafone IT" rat="LTE" q="21.60" rsrp="-98" sinr="3" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5933731" lon="10.4424726">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:09:56.347+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772384993581"/>
+        <radio op="I TIM" rat="LTE" q="45.00" rsrp="-100" sinr="13" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="15.30" rsrp="-108" sinr="4" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5933527" lon="10.4425478">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:10:23.519+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="87" state="moving" tsMs="1772384999499"/>
+        <radio op="I TIM" rat="LTE" q="70.20" rsrp="-86" sinr="13" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="42.00" rsrp="-97" sinr="10" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.593308" lon="10.4423708">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:10:46.774+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385027042"/>
+        <radio op="I TIM" rat="LTE" q="70.20" rsrp="-86" sinr="13" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="42.00" rsrp="-97" sinr="10" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932809" lon="10.4423709">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:10:57.059+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="86" state="moving" tsMs="1772385042551"/>
+        <radio op="I TIM" rat="LTE" q="70.20" rsrp="-86" sinr="13" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="42.00" rsrp="-97" sinr="10" rsrq="-10"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5933038" lon="10.4423881">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:11:06.938+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="86" state="moving" tsMs="1772385042551"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="10.50" rsrp="-104" sinr="0" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.593291" lon="10.4423594">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:11:16.775+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="97" state="moving" tsMs="1772385057581"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="10.50" rsrp="-104" sinr="0" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932798" lon="10.4424086">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:11:27.421+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385072613"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="10.50" rsrp="-104" sinr="0" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932671" lon="10.4424223">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:11:32.439+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="97" state="moving" tsMs="1772385087647"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="10.50" rsrp="-104" sinr="0" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.593326" lon="10.4424219">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:11:44.773+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="98" state="moving" tsMs="1772385098019"/>
+        <radio op="I TIM" rat="LTE" q="32.00" rsrp="-93" sinr="5" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="10.50" rsrp="-104" sinr="0" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5934029" lon="10.4424844">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:12:22.253+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772385138667"/>
+        <radio op="I TIM" rat="LTE" q="37.50" rsrp="-100" sinr="10" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="25.20" rsrp="-107" sinr="9" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5934788" lon="10.4424063">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:13:39.679+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385214669"/>
+        <radio op="I TIM" rat="LTE" q="37.50" rsrp="-100" sinr="10" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="25.20" rsrp="-107" sinr="9" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5933203" lon="10.4425586">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:14:44.833+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="97" state="moving" tsMs="1772385280345"/>
+        <radio op="I TIM" rat="LTE" q="41.80" rsrp="-103" sinr="14" rsrq="-9"/>
+        <radio op="vodafone IT" rat="LTE" q="14.30" rsrp="-112" sinr="6" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932387" lon="10.4427831">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:15:38.498+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="89" state="moving" tsMs="1772385335015"/>
+        <radio op="I TIM" rat="LTE" q="48.40" rsrp="-103" sinr="17" rsrq="-10"/>
+        <radio op="vodafone IT" rat="LTE" q="20.40" rsrp="-108" sinr="7" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.593272" lon="10.4429314">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:16:11.762+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772385371842"/>
+        <radio op="I TIM" rat="LTE" q="70.40" rsrp="-93" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="77.50" rsrp="-94" sinr="20" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932796" lon="10.4429195">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:17:04.392+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="49" state="still" tsMs="1772385420712"/>
+        <radio op="I TIM" rat="LTE" q="70.40" rsrp="-93" sinr="17" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="77.50" rsrp="-94" sinr="20" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932701" lon="10.4429227">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:17:41.267+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385457695"/>
+        <radio op="I TIM" rat="LTE" q="68.20" rsrp="-94" sinr="17" rsrq="-5"/>
+        <radio op="vodafone IT" rat="LTE" q="39.60" rsrp="-103" sinr="13" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932763" lon="10.4429428">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:18:11.237+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385490733"/>
+        <radio op="I TIM" rat="LTE" q="56.70" rsrp="-98" sinr="16" rsrq="-6"/>
+        <radio op="vodafone IT" rat="LTE" q="52.00" rsrp="-99" sinr="15" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932747" lon="10.442928">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:18:57.905+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385537431"/>
+        <radio op="I TIM" rat="LTE" q="56.70" rsrp="-98" sinr="16" rsrq="-6"/>
+        <radio op="vodafone IT" rat="LTE" q="52.00" rsrp="-99" sinr="15" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932762" lon="10.4429314">
+      <ele>254.60000610351562</ele>
+      <time>2026-03-01T18:19:32.36+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385568667"/>
+        <radio op="I TIM" rat="LTE" q="76.80" rsrp="-93" sinr="19" rsrq="-6"/>
+        <radio op="vodafone IT" rat="LTE" q="45.90" rsrp="-98" sinr="12" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5936016" lon="10.4408102">
+      <ele>253.70001220703125</ele>
+      <time>2026-03-01T18:22:45.687+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772385766392"/>
+        <radio op="I TIM" rat="LTE" q="88.00" rsrp="-80" sinr="17" rsrq="-7"/>
+        <radio op="vodafone IT" rat="LTE" q="66.30" rsrp="-86" sinr="12" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.593208" lon="10.442357">
+      <ele>254.10000610351562</ele>
+      <time>2026-03-01T18:23:25.885+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385805680"/>
+        <radio op="I TIM" rat="LTE" q="88.00" rsrp="-80" sinr="17" rsrq="-7"/>
+        <radio op="vodafone IT" rat="LTE" q="66.30" rsrp="-86" sinr="12" rsrq="-7"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932071" lon="10.4423511">
+      <ele>252.40000915527344</ele>
+      <time>2026-03-01T18:24:03.557+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385842438"/>
+        <radio op="I TIM" rat="LTE" q="78.00" rsrp="-86" sinr="15" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="44.00" rsrp="-82" sinr="6" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5932648" lon="10.4433846">
+      <ele>254.40000915527344</ele>
+      <time>2026-03-01T18:24:34.745+01:00</time>
+      <extensions>
+        <activity type="ON_BICYCLE" conf="72" state="moving" tsMs="1772385874712"/>
+        <radio op="I TIM" rat="LTE" q="78.00" rsrp="-86" sinr="15" rsrq="-8"/>
+        <radio op="vodafone IT" rat="LTE" q="44.00" rsrp="-82" sinr="6" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5953141" lon="10.4440838">
+      <ele>255.90000915527344</ele>
+      <time>2026-03-01T18:25:05.926+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385900621"/>
+        <radio op="I TIM" rat="LTE" q="25.20" rsrp="-97" sinr="4" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-105" rsrq="-16"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.5976018" lon="10.4476132">
+      <ele>258.20001220703125</ele>
+      <time>2026-03-01T18:25:37.219+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385931837"/>
+        <radio op="I TIM" rat="LTE" q="25.20" rsrp="-97" sinr="4" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-105" rsrq="-16"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.599809" lon="10.4510245">
+      <ele>258.1000061035156</ele>
+      <time>2026-03-01T18:26:08.451+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385963040"/>
+        <radio op="I TIM" rat="LTE" q="30.80" rsrp="-97" sinr="6" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="55.20" rsrp="-102" sinr="19" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6003285" lon="10.4519421">
+      <ele>258.1000061035156</ele>
+      <time>2026-03-01T18:26:15.775+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772385968470"/>
+        <radio op="I TIM" rat="LTE" q="30.80" rsrp="-97" sinr="6" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="55.20" rsrp="-102" sinr="19" rsrq="-8"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6021509" lon="10.4531789">
+      <ele>258.1000061035156</ele>
+      <time>2026-03-01T18:26:49.861+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386005157"/>
+        <radio op="I TIM" rat="LTE" q="15.40" rsrp="-103" sinr="2" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="24.20" rsrp="-103" sinr="6" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6020615" lon="10.4530841">
+      <ele>258.1000061035156</ele>
+      <time>2026-03-01T18:26:55.775+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386020757"/>
+        <radio op="I TIM" rat="LTE" q="15.40" rsrp="-103" sinr="2" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="24.20" rsrp="-103" sinr="6" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6021663" lon="10.4530429">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T18:27:08.775+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386030596"/>
+        <radio op="I TIM" rat="LTE" q="15.40" rsrp="-103" sinr="2" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="24.20" rsrp="-103" sinr="6" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6021663" lon="10.4530429">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T18:27:10.458+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386035972"/>
+        <radio op="I TIM" rat="LTE" q="15.40" rsrp="-103" sinr="2" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="24.20" rsrp="-103" sinr="6" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6021765" lon="10.4531494">
+      <ele>260.2366265839921</ele>
+      <time>2026-03-01T18:27:41.344+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386057556"/>
+        <radio op="I TIM" rat="LTE" q="15.40" rsrp="-103" sinr="2" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="24.20" rsrp="-103" sinr="6" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.602139" lon="10.4531659">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T18:27:46.775+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386072242"/>
+        <radio op="I TIM" rat="LTE" rsrp="-99" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-105" sinr="4" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6021929" lon="10.4532667">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T18:28:22.673+01:00</time>
+      <extensions>
+        <activity type="ON_BICYCLE" conf="84" state="moving" tsMs="1772386099149"/>
+        <radio op="I TIM" rat="LTE" rsrp="-99" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="18.00" rsrp="-105" sinr="4" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.60217" lon="10.4531402">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T18:28:53.887+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386129701"/>
+        <radio op="I TIM" rat="LTE" q="16.10" rsrp="-102" sinr="2" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-105" rsrq="-15"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6021788" lon="10.4534566">
+      <ele>261.8000183105469</ele>
+      <time>2026-03-01T18:29:25.054+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386160921"/>
+        <radio op="I TIM" rat="LTE" q="16.10" rsrp="-102" sinr="2" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-105" rsrq="-15"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025809" lon="10.45338">
+      <ele>261.8000183105469</ele>
+      <time>2026-03-01T18:29:56.275+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772386192016"/>
+        <radio op="I TIM" rat="LTE" q="19.20" rsrp="-109" sinr="7" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-114" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025841" lon="10.4536578">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T18:30:27.554+01:00</time>
+      <extensions>
+        <activity type="ON_FOOT" conf="96" state="moving" tsMs="1772386223887"/>
+        <radio op="I TIM" rat="LTE" q="19.20" rsrp="-109" sinr="7" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-114" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025841" lon="10.4536578">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T18:30:58.875+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386255482"/>
+        <radio op="I TIM" rat="LTE" q="3.00" rsrp="-119" sinr="0" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" q="2.40" rsrp="-121" sinr="1" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025487" lon="10.4530826">
+      <ele>261.70001220703125</ele>
+      <time>2026-03-01T18:31:36.174+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386295631"/>
+        <radio op="I TIM" rat="LTE" q="3.00" rsrp="-119" sinr="0" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" q="2.40" rsrp="-121" sinr="1" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6026411" lon="10.4540722">
+      <ele>261.70001220703125</ele>
+      <time>2026-03-01T18:32:34.775+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386342583"/>
+        <radio op="I TIM" rat="LTE" q="1.80" rsrp="-122" sinr="1" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" q="3.00" rsrp="-122" sinr="5" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6026411" lon="10.4540722">
+      <ele>261.70001220703125</ele>
+      <time>2026-03-01T18:33:11.799+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386391861"/>
+        <radio op="I TIM" rat="LTE" rsrp="-123" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" q="5.00" rsrp="-120" sinr="5" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6026411" lon="10.4540722">
+      <ele>261.70001220703125</ele>
+      <time>2026-03-01T18:33:24.095+01:00</time>
+      <extensions>
+        <activity type="ON_BICYCLE" conf="80" state="moving" tsMs="1772386395335"/>
+        <radio op="I TIM" rat="LTE" rsrp="-123" rsrq="-15"/>
+        <radio op="vodafone IT" rat="LTE" q="5.00" rsrp="-120" sinr="5" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025651" lon="10.4535464">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T18:34:12.816+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386450398"/>
+        <radio op="I TIM" rat="LTE" q="22.40" rsrp="-111" sinr="11" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="3.50" rsrp="-120" sinr="2" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025838" lon="10.4536642">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T18:34:52.995+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386489430"/>
+        <radio op="I TIM" rat="LTE" q="22.40" rsrp="-111" sinr="11" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="3.50" rsrp="-120" sinr="2" rsrq="-13"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025873" lon="10.4536715">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T18:35:24.183+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386519844"/>
+        <radio op="I TIM" rat="LTE" q="14.00" rsrp="-111" sinr="5" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-115" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025981" lon="10.4535755">
+      <ele>261.9000244140625</ele>
+      <time>2026-03-01T18:35:55.583+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386551969"/>
+        <radio op="I TIM" rat="LTE" q="14.00" rsrp="-111" sinr="5" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-115" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025869" lon="10.4536547">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T18:36:27.229+01:00</time>
+      <extensions>
+        <activity type="UNKNOWN" conf="40" state="unknown" tsMs="1772386572764"/>
+        <radio op="I TIM" rat="LTE" rsrp="-110" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-109" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025836" lon="10.4536704">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T18:36:58.831+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="96" state="still" tsMs="1772386617622"/>
+        <radio op="I TIM" rat="LTE" rsrp="-110" rsrq="-14"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-109" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025821" lon="10.4536681">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T18:37:33.308+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="99" state="still" tsMs="1772386651883"/>
+        <radio op="I TIM" rat="LTE" q="20.90" rsrp="-114" sinr="14" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="12.80" rsrp="-109" sinr="3" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025839" lon="10.4536668">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T18:38:09.755+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="97" state="still" tsMs="1772386686767"/>
+        <radio op="I TIM" rat="LTE" q="20.90" rsrp="-114" sinr="14" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" q="12.80" rsrp="-109" sinr="3" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025881" lon="10.4536642">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T19:55:19.943+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772391303891"/>
+        <radio op="I TIM" rat="LTE" q="16.00" rsrp="-109" sinr="5" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="11.90" rsrp="-108" sinr="2" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.602586" lon="10.4536523">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T19:55:55.466+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772391334985"/>
+        <radio op="I TIM" rat="LTE" q="16.00" rsrp="-109" sinr="5" rsrq="-11"/>
+        <radio op="vodafone IT" rat="LTE" q="11.90" rsrp="-108" sinr="2" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025948" lon="10.453654">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T19:56:47.462+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772391397119"/>
+        <radio op="I TIM" rat="LTE" q="14.40" rsrp="-109" sinr="4" rsrq="-12"/>
+        <radio op="vodafone IT" rat="LTE" q="9.00" rsrp="-107" sinr="0" rsrq="-12"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.602589" lon="10.4536471">
+      <ele>262.3000183105469</ele>
+      <time>2026-03-01T19:57:49.893+01:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1772391459560"/>
+        <radio op="I TIM" rat="LTE" q="11.20" rsrp="-109" sinr="2" rsrq="-13"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-120" rsrq="-16"/>
+      </extensions>
+    </trkpt>
   </trkseg></trk>
 </gpx>
