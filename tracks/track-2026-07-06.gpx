@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="CellGPX" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk><name>CellGPX</name><trkseg>
+    <trkpt lat="45.6025422" lon="10.4536707">
+      <ele>261.6000061035156</ele>
+      <time>2026-07-06T00:59:28.54+02:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1783292347991"/>
+        <radio op="vodafone IT" rat="LTE" q="11.40" rsrp="-106" sinr="1" rsrq="-9"/>
+        <radio op="I TIM" rat="LTE" q="17.60" rsrp="-103" sinr="3" rsrq="-11"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025431" lon="10.453669">
+      <ele>261.6000061035156</ele>
+      <time>2026-07-06T01:00:20.488+02:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1783292410015"/>
+        <radio op="vodafone IT" rat="LTE" q="12.60" rsrp="-107" sinr="2" rsrq="-10"/>
+        <radio op="I TIM" rat="LTE" rsrp="-117" rsrq="-16"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.602542" lon="10.4536675">
+      <ele>261.6000061035156</ele>
+      <time>2026-07-06T01:01:22.937+02:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1783292472327"/>
+        <radio op="vodafone IT" rat="LTE" rsrp="-107" rsrq="-10"/>
+        <radio op="I TIM" rat="LTE" rsrp="-110" rsrq="-14"/>
+      </extensions>
+    </trkpt>
+    <trkpt lat="45.6025416" lon="10.4536673">
+      <ele>261.6000061035156</ele>
+      <time>2026-07-06T01:02:24.937+02:00</time>
+      <extensions>
+        <activity type="STILL" conf="100" state="still" tsMs="1783292534387"/>
+        <radio op="vodafone IT" rat="LTE" q="15.20" rsrp="-106" sinr="3" rsrq="-9"/>
+        <radio op="I TIM" rat="LTE" q="41.80" rsrp="-103" sinr="14" rsrq="-9"/>
+      </extensions>
+    </trkpt>
+  </trkseg></trk>
+</gpx>
